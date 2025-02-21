@@ -8,7 +8,8 @@
     "store": "Store"
   },
   "btns": {
-    "staking": "Staking"
+    "staking": "Staking",
+    "learn-more": "Learn More"
   },
   "home": {
     "hero": {

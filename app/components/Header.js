@@ -1,12 +1,14 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import MobileMenu from "./MobileMenu";
-import Button from "./Button";
-import { useTranslation } from "react-i18next";
-import { FaBars } from "react-icons/fa";
-import NavLink from "./NavLink";
+import Link from "next/link";
 import LanguageDropdown from "./LanguageDropdown";
+import { useTranslation } from "react-i18next";
+import NavLink from "./NavLink";
+import { FaBars } from "react-icons/fa";
+import MobileMenu from "./MobileMenu";
+import LocalizedButtonLink from "./Button";
+
 
 const navLinks = [
   { name: "Home", href: "/" },
@@ -43,18 +45,19 @@ const Header = () => {
     i18n.changeLanguage(finalLang);
   }, [i18n]);
 
+  const createLocalizedPath = (path) => `/${currentLang}${path}`;
+
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-
   return (
     <div className="px-4">
       <div className="fixed top-3 lg:top-8 left-1/2 -translate-x-1/2 lg:max-w-[1086px] w-[95%] py-2.5 px-4 z-30 flex justify-center bg-[#44067503] rounded-[14px] border border-[#9685afbd]"
         style={{ backdropFilter: "blur(94.2px)", boxShadow: "0px 0px 6px 2px #9B59FF inset" }}
       >
         <div className="flex items-center justify-between w-full">
-          <div className="cursor-pointer">
+          <Link href={createLocalizedPath("/")} className="cursor-pointer">
             <Image src="/assets/logo.svg" alt="VORNA AI" width={131} height={43} />
-          </div>
+          </Link>
 
           <ul className="hidden lg:flex items-center space-x-6 text-white">
             {navLinks.map((link, idx) => (
@@ -64,7 +67,7 @@ const Header = () => {
 
           <div className="hidden lg:flex items-center space-x-4">
             <LanguageDropdown />
-            <Button />
+            <LocalizedButtonLink href="/staking" translationKey="btns.staking" />
           </div>
 
           <button className="lg:hidden text-white" onClick={() => setMobileOpen(!mobileOpen)}>
