@@ -1,0 +1,21 @@
+{
+  "tavtabs": {
+    "body": "Body",
+    "sports": "Sports",
+    "coaches": "Coaches",
+    "podcasts": "Podcasts",
+    "tutorials": "Tutorials",
+    "store": "Store"
+  },
+  "btns": {
+    "staking": "Staking"
+  },
+  "home": {
+    "hero": {
+      "text": "Envision your new body with precision! Specify which parts you want to improve, shape, and size."
+    }
+  },
+  "footer": {
+    "footertext": "© Innovative AI Solutions for Urban Development. 2024"
+  }
+}
