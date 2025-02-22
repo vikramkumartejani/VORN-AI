@@ -13,8 +13,8 @@ i18n
     fallbackLng: "en",
     supportedLngs: ["en", "pt", "ru"],
     ignoreJSONStructure: false,
-    ns: ["translation"], // Lisa namespace
-    defaultNS: "translation", // Kasuta translation kui vaikimisi NS
+    ns: ["translation"], 
+    defaultNS: "translation",  
     debug: process.env.NODE_ENV !== "production",
     preload: ["en", "pt", "ru"], 
 
@@ -24,7 +24,7 @@ i18n
 
     backend: {
       loadPath: "/locales/{{lng}}/translation.json",
-      cache: true, // Enable caching
+      cache: true,  
     },
     
 
