@@ -26,6 +26,7 @@ const useLanguage = () => {
 
     const selectedLang = getLanguage();
 
+    // Only change language if it's different and i18n is initialized
     if (i18n.language !== selectedLang && i18n.isInitialized) {
       i18n.changeLanguage(selectedLang).catch((err) => {
         console.error("Error changing language:", err);
