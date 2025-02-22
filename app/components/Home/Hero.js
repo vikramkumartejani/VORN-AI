@@ -5,7 +5,18 @@ const Hero = () => {
     return (
         <div className='flex items-start justify-between gap-5'>
             <div className='max-w-[609px] text-white'>
-                <div></div>
+                <div
+                    className="mb-[30px] max-w-[271px] h-[42px] bg-[#170326] rounded-[50px] border border-[#FFFFFF26] flex items-center gap-2 justify-center animate-pulse-shadow"
+                >
+                    <div className="bg-[#9B59FF] w-[34px] h-[18px] rounded-[40px] flex items-center justify-center inter text-black text-[10px] leading-[26px] tracking-[-0.01em] font-bold">
+                        NEW
+                    </div>
+                    <h2 className="text-[#9B59FF] text-[16px] leading-[26px] font-normal tracking-[-0.01em]">
+                        Next-Gen Integration is Live!
+                    </h2>
+                </div>
+
+
                 <h1
                     className="text-[54px] leading-[74px] font-bold bg-clip-text text-transparent"
                     style={{
@@ -16,7 +27,9 @@ const Hero = () => {
                 >
                     Powering the Future: AI, DePIN & RWA in One Unified Grid
                 </h1>
+
                 <p className='my-[30px] text-[18px] leading-[30px] font-normal font-poppins text-white/80 max-w-[496px]'>AI-driven compute power, tokenized assets, and decentralized infrastructure in one ecosystem.</p>
+
                 <div className='flex items-center gap-[30px]'>
                     <button
                         className="relative text-[16px] leading-[19.2px] font-medium w-[134px] h-[47px] rounded-xl text-white transition-all duration-300 shadow-[0px_21px_39.3px_rgba(132,0,255,0.33),0px_0px_6px_1px_#9B59FF_inset]"
@@ -57,8 +70,8 @@ const Hero = () => {
                 </div>
             </div>
 
-            <div className='h-[728px] py-[30px] w-[504px] rounded-[20px] bg-[#15012D0D] border border-[#842DFF]' style={{backdropFilter: "blur(100px)"}}>
-                <BuyNowBox/>
+            <div className='h-[728px] py-[30px] w-[504px] rounded-[20px] bg-[#15012D0D] border border-[#842DFF]' style={{ backdropFilter: "blur(100px)" }}>
+                <BuyNowBox />
             </div>
         </div>
     )
