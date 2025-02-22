@@ -13,6 +13,9 @@ export default {
       fontFamily: {
         poppins: ["Poppins", "serif"],
       },
+      boxShadow: {
+        "nrtx-hover": "0px 0px 100px 0px #8B5CF680 inset",
+      }
     },
   },
   plugins: [],

@@ -11,21 +11,23 @@ i18n
   .use(initReactI18next)
   .init({
     fallbackLng: "en",
-    supportedLngs: ["en", "pt", "ru"], // Add your supported languages here
-    debug: process.env.NODE_ENV === "development",
+    supportedLngs: ["en", "pt", "ru"],
+    debug: true,
+    ignoreJSONStructure: false,
+    ns: ["translation"], // Lisa namespace
+    defaultNS: "translation", // Kasuta translation kui vaikimisi NS
 
     interpolation: {
-      escapeValue: false, // React already handles escaping
+      escapeValue: false,
     },
 
     backend: {
-      // Updated loadPath to fetch from nested folder structure
-      loadPath: "/locales/{{lng}}.json",
+      loadPath: "/locales/{{lng}}/translation.json",
     },
 
     detection: {
       order: ["localStorage", "path", "navigator"],
-      caches: ["localStorage"], // Store the selected language in localStorage
+      caches: ["localStorage"],
     },
 
     lng:
@@ -33,5 +35,7 @@ i18n
         ? localStorage.getItem("selectedLanguage") || "en"
         : "en",
   });
+
+
 
 export default i18n;

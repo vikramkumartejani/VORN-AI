@@ -54,7 +54,7 @@ const BuiltOn = () => {
                         <div className="flex gap-6 sm:gap-[39px]">
                             {logoSet.map((logo, index) => (
                                 <div key={`ltr-${index}`} className="flex-shrink-0">
-                                    <Image src={logo} alt={`technology-${index % logos.length + 1}`} width={104} height={104} className='w-[80px] h-[80px] sm:w-[104px] sm:h-[104px]' />
+                                    <Image src={logo} alt={`technology-${index % logos.length + 1}`} draggable="false" width={104} height={104} className='w-[80px] h-[80px] sm:w-[104px] sm:h-[104px]' />
                                 </div>
                             ))}
                         </div>
@@ -78,7 +78,7 @@ const BuiltOn = () => {
                         <div className="flex gap-6 sm:gap-[39px]">
                             {logoSet.map((logo, index) => (
                                 <div key={`rtl-${index}`} className="flex-shrink-0">
-                                    <Image src={logo} alt={`technology-${index % logos.length + 1}`} width={104} height={104} className='w-[80px] h-[80px] sm:w-[104px] sm:h-[104px]' />
+                                    <Image src={logo} alt={`technology-${index % logos.length + 1}`} draggable="false" width={104} height={104} className='w-[80px] h-[80px] sm:w-[104px] sm:h-[104px]' />
                                 </div>
                             ))}
                         </div>

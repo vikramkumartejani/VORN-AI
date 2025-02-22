@@ -36,7 +36,7 @@ const OurFeatures = () => {
             <h1 className='my-[25px] text-[40px] leading-[44px] font-bold text-white text-center'>
                 <span className='text-[#9442ED]'>VORN AI:</span> Unified AI + DePIN + RWA Ecosystem
             </h1>
-            <p className='max-w-[698px] mx-auto text-center w-full text-[18px] leading-[27px] font-normal font-poppins text-white'>
+            <p className='max-w-[698px] mx-auto text-center w-full text-[18px] leading-[27px] font-normal font-poppins text-white/80'>
                 VORN AI is a self-sustaining, AI-driven ecosystem that integrates AI, DePIN , and RWA tokenization to create a fully autonomous decentralized economy.
             </p>
 
