@@ -7,8 +7,8 @@ const useLanguageRedirect = () => {
   const lang = window.location.pathname.split("/")[1];
 
   useEffect(() => {
-    console.log("Current language:", lang);
-    if (!["en", "pt-BR", "ru"].includes(lang) && lang !== "") {
+    // Only redirect if the language is invalid and not empty
+    if (lang && !["en", "pt-BR", "ru"].includes(lang)) {
       console.log("Redirecting to /en/");
       router.push("/en/");
     }

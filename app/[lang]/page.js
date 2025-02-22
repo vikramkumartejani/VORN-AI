@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { I18nextProvider } from "react-i18next";
 import i18n from "../../i18n";
 import Header from "../components/Header";
@@ -15,6 +15,20 @@ import Hero from "../components/Home/Hero";
 const Home = () => {
   useLanguage();
   useLanguageRedirect();
+
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    // Fetch data after the initial render
+    const fetchData = async () => {
+      // Simulate a data fetch
+      const response = await fetch("/api/data"); // Replace with your actual API
+      const result = await response.json();
+      setData(result);
+    };
+
+    fetchData();
+  }, []);
 
   return (
     <I18nextProvider i18n={i18n}>
