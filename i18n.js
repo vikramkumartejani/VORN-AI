@@ -16,7 +16,7 @@ i18n
     ns: ["translation"], // Lisa namespace
     defaultNS: "translation", // Kasuta translation kui vaikimisi NS
     debug: process.env.NODE_ENV !== "production",
-
+    preload: ["en", "pt", "ru"], 
 
     interpolation: {
       escapeValue: false,
