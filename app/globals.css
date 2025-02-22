@@ -1,18 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body{
+body {
   font-family: "Lato", serif;
   background-color: #020103;
   color: white;
@@ -22,19 +22,20 @@ html {
   scroll-behavior: smooth;
 }
 
-.inter{
+.inter {
   font-family: "Inter", serif;
 }
 
+/* Hero Section */
 @keyframes pulseShadow {
   0% {
-    box-shadow: 0px 0px 5px 0px #9B59FF;
+    box-shadow: 0px 0px 5px 0px #9b59ff;
   }
   50% {
-    box-shadow: 0px 0px 12px 5px #9B59FF;
+    box-shadow: 0px 0px 12px 5px #9b59ff;
   }
   100% {
-    box-shadow: 0px 0px 1px 0px #9B59FF;
+    box-shadow: 0px 0px 1px 0px #9b59ff;
   }
 }
 
@@ -42,4 +43,33 @@ html {
   animation: pulseShadow 2s infinite ease-in-out;
 }
 
- 
+/* Staking */
+.shadow-custom {
+  position: relative;
+  width: 419px;
+  height: 126px;
+  background: rgba(18, 9, 37, 0.03);
+  backdrop-filter: blur(30px);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0px 0px 25px rgba(139, 92, 246, 0.2),
+    inset 0px 0px 50px rgba(139, 92, 246, 0.5);
+}
+
+.shadow-custom::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  padding: 1px;
+  background: linear-gradient(180deg, #440675 0%, #7e0adb 100%);
+  mask: linear-gradient(white, white) content-box, linear-gradient(white, white);
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.staking-section {
+  backdrop-filter: blur(30px);
+  box-shadow: 0px 0px 25px rgba(139, 92, 246, 0.2),
+    /* Outer shadow */ inset 0px 0px 50px rgba(139, 92, 246, 0.5); /* Inner shadow */
+}

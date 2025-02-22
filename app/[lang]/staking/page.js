@@ -4,6 +4,10 @@ import { I18nextProvider } from "react-i18next";
 import i18n from "../../../i18n";
 import useLanguage from "../../hooks/useLanguage";
 import Header from "../../components/Header";
+import Footer from "../../components/Footer";
+import StakingSection from '../../components/Staking/StakingSection'
+import Referral from '../../components/Staking/Referral'
+import Leaderboard from '../../components/Staking/Leaderboard'
 
 const Staking = () => {
   useLanguage();
@@ -11,16 +15,41 @@ const Staking = () => {
   return (
     <I18nextProvider i18n={i18n}>
       <Header />
-      <div className="relative w-full h-screen overflow-hidden">
-        <video autoPlay loop muted playsInline className="absolute top-0 left-0 w-full h-full object-cover">
-          <source src="/assets/hero-section-bg.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+      <div className="pt-[202px] pb-[167px]">
+        <div className="w-full max-w-[1332px] mx-auto rounded-[20px] py-9 px-[30px] bg-[#10002080] border border-[#8616DF]" style={{ backdropFilter: "blur(14px)" }}>
+          {/* Total $VRN Balance & Staking Reward & Your Referral Earnings */}
+          <div className="flex items-center gap-[25px] justify-between">
+            <div className="relative p-[30px] rounded-[20px] shadow-custom">
+              <h3 className="text-white text-[20px] leading-[24px] font-normal mb-[5px]">
+                Total $VRN Balance
+              </h3>
+              <h2 className="text-white text-[32px] leading-[38.4px] font-normal">0</h2>
+            </div>
+            <div className="relative p-[30px] rounded-[20px] shadow-custom">
+              <h3 className="text-white text-[20px] leading-[24px] font-normal mb-[5px]">
+                Staking Reward
+              </h3>
+              <h2 className="text-white text-[32px] leading-[38.4px] font-normal">0</h2>
+            </div>
+            <div className="relative p-[30px] rounded-[20px] shadow-custom">
+              <h3 className="text-white text-[20px] leading-[24px] font-normal mb-[5px]">
+                Your Referral Earnings
+              </h3>
+              <h2 className="text-white text-[32px] leading-[38.4px] font-normal">0</h2>
+            </div>
 
-        <div className="absolute inset-0 flex items-center justify-center text-white text-4xl font-bold">
-          welcome
+          </div>
+
+          <StakingSection />
+
+          {/* Referral & Leaderboard */}
+          <div className="grid grid-cols-2 gap-[25px]">
+            <Referral/>
+            <Leaderboard/>
+          </div>
         </div>
       </div>
+      <Footer />
     </I18nextProvider>
   );
 };

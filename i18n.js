@@ -24,7 +24,7 @@ i18n
 
     backend: {
       loadPath: "/locales/{{lng}}/translation.json",
-      cache: true, // Enable caching
+      cache: true,  
     },
     
 
