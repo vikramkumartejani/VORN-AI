@@ -1,7 +1,5 @@
 .stakingButton {
   position: relative;
-  width: 122px;
-  height: 41px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -101,12 +99,10 @@
   inset: 0;
   border-radius: 12px;
   transition: all 0.5s ease-in-out;
-  
 }
 
 .stakingButtonBuyNow {
-  box-shadow: 0px 300px 500px 300px #9B59FF inset;
-
+  box-shadow: 0px 300px 500px 300px #9b59ff inset;
 }
 
 .stakingButtonBuyNow:hover {
@@ -133,9 +129,12 @@
   align-items: center;
   justify-content: center;
   color: white;
-  box-shadow: 0px 0px 6px 3px #9B59FF inset;
-  background: radial-gradient(50.91% 97.54% at 50% 2.46%, #A052FF 0%, #440675 100%);
-
+  box-shadow: 0px 0px 6px 3px #9b59ff inset;
+  background: radial-gradient(
+    50.91% 97.54% at 50% 2.46%,
+    #a052ff 0%,
+    #440675 100%
+  );
 }
 
 .glowEffectBuyNow {
