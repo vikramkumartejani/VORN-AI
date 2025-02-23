@@ -53,7 +53,7 @@ const Header = () => {
   return (
     <div className="px-4">
       <div
-        className="fixed top-3 lg:top-8 left-1/2 -translate-x-1/2 lg:max-w-[1086px] w-[95%] py-2.5 px-4 z-30 flex justify-center bg-[#44067503] rounded-[14px] border border-[#9685afbd]"
+        className="fixed top-3 lg:top-8 left-1/2 -translate-x-1/2 lg:max-w-[1086px] w-[95%] py-2 px-4 z-30 flex justify-center bg-[#44067503] rounded-[14px] border border-[#9685afbd]"
         style={{
           backdropFilter: "blur(94.2px)",
           boxShadow: "0px 0px 6px 2px #9B59FF inset",
