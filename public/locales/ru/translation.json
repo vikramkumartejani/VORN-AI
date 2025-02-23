@@ -1,23 +1,63 @@
 {
-    "tavtabs": {
-      "body": "Corpo",
-      "sports": "Esportes",
-      "coaches": "Treinadores",
-      "podcasts": "Podcasts",
-      "tutorials": "Tutoriais",
-      "store": "Loja"
+  "header": {
+    "nav": {
+      "home": "Главная",
+      "features": "Функции",
+      "aiModels": "Модели ИИ",
+      "security": "Безопасность",
+      "roadmap": "Дорожная карта",
+      "tokenomics": "Токеномика",
+      "whitepaper": "Белая книга",
+      "faqs": "FAQs"
     },
-    "btns": {
-      "staking": "Стейкинг",
-      "learn-more": "Learn More"
-    },
-    "home": {
-      "hero": {
-        "text": "Visualize seu novo corpo com precisão! Especifique quais partes você deseja melhorar, modelar e dimensionar."
-      }
-    },
-    "footer": {
-      "footertext": "© Soluções Inovadoras de IA para o Desenvolvimento Urbano. 2024"
+    "btn": "Стейкинг"
+  },
+  "tavtabs": {
+    "body": "Corpo",
+    "sports": "Esportes",
+    "coaches": "Treinadores",
+    "podcasts": "Podcasts",
+    "tutorials": "Tutoriais",
+    "store": "Loja"
+  },
+  "btns": {
+    "learn-more": "Learn More"
+  },
+  "home": {
+    "hero": {
+      "text": "Visualize seu novo corpo com precisão! Especifique quais partes você deseja melhorar, modelar e dimensionar."
     }
+  },
+  "footer": {
+    "description": "VORN.AI – Продвигаем будущее децентрализованного интеллекта. На основе ИИ. Поддерживается инфраструктурой. Токенизация активов.",
+    "product": {
+      "title": "Продукт",
+      "features": "Функции",
+      "unifiedAI": "Унифицированный ИИ",
+      "depin": "DePIN",
+      "rwa": "RWA"
+    },
+    "company": {
+      "title": "Компания",
+      "home": "Главная",
+      "roadmap": "Дорожная карта",
+      "tokenomics": "Токеномика",
+      "faqs": "Часто задаваемые вопросы"
+    },
+    "resources": {
+      "title": "Ресурсы",
+      "staking": "Стейкинг",
+      "whitepaper": "Белая книга",
+      "cookiePolicy": "Политика использования файлов cookie"
+    },
+    "newsletter": {
+      "title": "Подпишитесь на нашу рассылку",
+      "subtitle": "Будьте в курсе всех новостей о Refinance.",
+      "placeholder": "Введите ваш email",
+      "subscribe": "Подписаться"
+    },
+    "privacyPolicy": "Политика конфиденциальности",
+    "termsConditions": "Условия и положения",
+    "rights": "© 2025, VORN AI. Все права защищены"
   }
-  
+}
