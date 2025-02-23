@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState } from 'react'
+import styles from "../../styling/StakingButton.module.css";
 
 const stakingOptions = [
     { period: "30 Days", apr: "50%", bgColor: "radial-gradient(42.46% 123.69% at 57.02% 58.9%, #A761FF 0%, #490A84 100%)", textColor: "text-white" },
@@ -8,6 +9,7 @@ const stakingOptions = [
 ];
 
 const StakingSection = () => {
+    const [isHovered, setIsHovered] = useState(false);
     return (
         <div className="mt-[25px] rounded-[20px] bg-[#0B0015] border border-[#440675] p-[30px]">
             <h2 className="text-white text-[24px] leading-[28.8px] font-bold">Staking</h2>
@@ -37,7 +39,17 @@ const StakingSection = () => {
                     <input type='text' placeholder='10,000.00 VRN' className='h-full bg-transparent outline-none w-full text-white text-[18px] leading-[27px] font-normal font-poppins placeholder:text-white' />
                     <button className='underline text-[#C176FF] text-[18px] leading-[27px] font-normal font-poppins'>MAX</button>
                 </div>
-                <button className='w-full h-[66px] bg-[#8400FF54] rounded-xl'>STAKE NOW</button>
+                <button
+                    className={`${styles.stakingButtonNow} ${isHovered ? styles.hovered : ""}`}
+                    onMouseEnter={() => setIsHovered(true)}
+                    onMouseLeave={() => setIsHovered(false)}
+                >
+                    <div className={styles.gradientBorder} />
+                    <div className={`${styles.buttonContent} `}>
+                        STAKE NOW
+                    </div>
+                    <div className={styles.glowEffect} />
+                </button>
             </div>
 
             <div className='mt-[30px] grid grid-cols-2 gap-[27px]'>
