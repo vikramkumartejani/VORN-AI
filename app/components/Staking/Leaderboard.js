@@ -26,9 +26,9 @@ const Leaderboard = () => {
 
             {/* Thead as a separate box */}
             <div className="w-full bg-[#1C0035] border border-[#7209C5] rounded-xl p-5 h-[70px] flex justify-between text-nowrap">
-                <h3 className="text-left text-white text-[20px] leading-[24px] font-medium w-1/3">SR</h3>
-                <h3 className="text-center text-white text-[20px] leading-[24px] font-medium w-20">User</h3>
-                <h3 className="text-right text-white text-[20px] leading-[24px] font-medium w-1/3">$VRN Amount</h3>
+                <h3 className="text-left text-white text-[20px] leading-[24px] font-medium w-1/4">SR</h3>
+                <h3 className=" pl-14 text-white text-[20px] leading-[24px] font-medium w-1/2">User</h3>
+                <h3 className="text-right text-white text-[20px] leading-[24px] font-medium w-1/4">$VRN Amount</h3>
             </div>
 
             {/* Table Wrapper */}
@@ -37,13 +37,13 @@ const Leaderboard = () => {
                     <tbody className="">
                         {leaderboardData.map((item, index) => (
                             <tr key={item.id}>
-                                <td className="py-2.5 px-6 text-left text-[16px] leading-[19.2px] font-medium text-white w-1/3">
+                                <td className="py-2.5 px-6 text-left text-[16px] leading-[19.2px] font-medium text-white w-1/4">
                                     {item.id}
                                 </td>
-                                <td className="px-4 text-center text-[16px] leading-[19.2px] font-medium text-white w-1/3">
+                                <td className="px-4 pl-10 text-[16px] leading-[19.2px] font-medium text-white w-1/2">
                                     {item.user}
                                 </td>
-                                <td className="pr-10 text-right text-[16px] leading-[19.2px] font-medium text-white w-1/3">
+                                <td className="pr-10 text-right text-[16px] leading-[19.2px] font-medium text-white w-1/4">
                                     {item.amount}
                                 </td>
                             </tr>

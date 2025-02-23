@@ -10,7 +10,6 @@ const Referral = () => {
         navigator.clipboard.writeText(referralLink);
         setCopied(true);
 
-        // Reset "Copied!" message after 2 seconds
         setTimeout(() => setCopied(false), 2000);
     };
 
