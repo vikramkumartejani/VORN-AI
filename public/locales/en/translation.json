@@ -1,4 +1,17 @@
 {
+  "header": {
+    "nav": {
+      "home": "Home",
+      "features": "Features",
+      "aiModels": "AI Models",
+      "security": "Security",
+      "roadmap": "RoadMap",
+      "tokenomics": "Tokenomics",
+      "whitepaper": "Whitepaper",
+      "faqs": "FAQs"
+    },
+    "btn": "Staking"
+  },
   "tavtabs": {
     "body": "Body",
     "sports": "Sports",
@@ -8,7 +21,6 @@
     "store": "Store"
   },
   "btns": {
-    "staking": "Staking",
     "learn-more": "Learn More"
   },
   "home": {
@@ -17,6 +29,35 @@
     }
   },
   "footer": {
-    "footertext": "© Innovative AI Solutions for Urban Development. 2024"
+    "description": "VORN.AI – Powering the Future of Decentralized Intelligence AI-Driven. Infrastructure-Powered. Asset-Tokenized.",
+    "product": {
+      "title": "Product",
+      "features": "Features",
+      "unifiedAI": "Unified AI",
+      "depin": "DePIN",
+      "rwa": "RWA"
+    },
+    "company": {
+      "title": "Company",
+      "home": "Home",
+      "roadmap": "Roadmap",
+      "tokenomics": "Tokenomics",
+      "faqs": "FAQs"
+    },
+    "resources": {
+      "title": "Resources",
+      "staking": "Staking",
+      "whitepaper": "Whitepaper",
+      "cookiePolicy": "Cookie Policy"
+    },
+    "newsletter": {
+      "title": "Join our newsletter",
+      "subtitle": "Keep up to date with everything Refinance.",
+      "placeholder": "Enter your email",
+      "subscribe": "Subscribe"
+    },
+    "privacyPolicy": "Privacy Policy",
+    "termsConditions": "Terms and Conditions",
+    "rights": "© 2025, VORN AI. All rights reserved"
   }
 }
