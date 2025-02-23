@@ -1,6 +1,7 @@
 'use client'
 import Image from 'next/image'
 import React, { useState, useRef, useEffect } from 'react'
+import styles from "../../styling/StakingButton.module.css";
 
 const tabs = [
     { id: "ETH", label: "ETH", icon: "/assets/icons/eth.svg" },
@@ -32,6 +33,7 @@ const currencies = [
 ];
 
 const BuyNowBox = () => {
+    const [isHovered, setIsHovered] = useState(false);
     const [activeTab, setActiveTab] = useState("ETH");
     const [selectedCurrency, setSelectedCurrency] = useState(currencies[0]);
     const [isOpen, setIsOpen] = useState(false);
@@ -151,7 +153,7 @@ const BuyNowBox = () => {
                             )}
                         </div>
                     </div>
-                    
+
                     <div className='w-full h-[50px] rounded-lg border border-[#8616DF] flex items-center justify-between px-4 gap-5'>
                         <input type='text' placeholder='0.00' className='w-full bg-transparent outline-none placeholder:text-white/80 text-white text-base font-normal' />
                         <Image src='/assets/icons/meta.svg' alt='meta' width={24} height={24} />
@@ -170,7 +172,18 @@ const BuyNowBox = () => {
                     <p className='text-white/90 text-[14px] font-normal leading-[16.8px] text-left'>Spend $299.90 more to get 10% bonus tokens</p>
                 </div>
 
-                <button className='bg-[#A052FF] w-full h-[50px] rounded-lg'>Buy Now</button>
+                <button
+                    className={`${styles.stakingButtonBuyNow} ${isHovered ? styles.hovered : ""}`}
+                    onMouseEnter={() => setIsHovered(true)}
+                    onMouseLeave={() => setIsHovered(false)}
+                >
+                    <div className={styles.gradientBorder} />
+                    <div className={styles.buttonContentBuyNow}>
+                        Buy Now
+                    </div>
+                    <div className={styles.glowEffectBuyNow} />
+                </button>
+
                 <div className='mt-5 flex items-center justify-between gap-3'>
                     {infoItems.map((item, index) => (
                         <div key={index} className='flex items-center gap-2.5'>
