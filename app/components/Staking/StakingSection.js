@@ -45,7 +45,7 @@ const StakingSection = () => {
                     onMouseLeave={() => setIsHovered(false)}
                 >
                     <div className={styles.gradientBorder} />
-                    <div className={`${styles.buttonContent} `}>
+                    <div className={`${styles.buttonContentNow} `}>
                         STAKE NOW
                     </div>
                     <div className={styles.glowEffect} />
