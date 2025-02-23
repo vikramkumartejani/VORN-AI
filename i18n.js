@@ -1,3 +1,4 @@
+// i18n.js
 "use client";
 
 import i18n from "i18next";
@@ -5,37 +6,48 @@ import { initReactI18next } from "react-i18next";
 import HttpBackend from "i18next-http-backend";
 import LanguageDetector from "i18next-browser-languagedetector";
 
+// Import translation files directly to ensure they're bundled
+import enTranslations from "./public/locales/en/translation.json";
+import ptTranslations from "./public/locales/pt-BR/translation.json";
+import ruTranslations from "./public/locales/ru/translation.json";
+
+const resources = {
+  en: {
+    translation: enTranslations,
+  },
+  "pt-BR": {
+    translation: ptTranslations,
+  },
+  ru: {
+    translation: ruTranslations,
+  },
+};
+
 i18n
-  .use(HttpBackend)
-  .use(LanguageDetector)
   .use(initReactI18next)
+  .use(LanguageDetector)
   .init({
+    resources,
     fallbackLng: "en",
-    supportedLngs: ["en", "pt", "ru"],
-    ignoreJSONStructure: false,
+    supportedLngs: ["en", "pt-BR", "ru"],
     ns: ["translation"],
     defaultNS: "translation",
     debug: process.env.NODE_ENV !== "production",
-    preload: ["en", "pt", "ru"],
 
     interpolation: {
       escapeValue: false,
     },
 
-    backend: {
-      loadPath: "/locales/{{lng}}/translation.json",
-      cache: true,
-    },
-
     detection: {
-      order: ["localStorage", "path", "navigator"],
+      order: ["path", "localStorage", "navigator"],
+      lookupFromPathIndex: 1,
       caches: ["localStorage"],
     },
 
-    lng:
-      typeof window !== "undefined"
-        ? localStorage.getItem("selectedLanguage") || "en"
-        : "en",
+    react: {
+      useSuspense: false,
+      bindI18n: "languageChanged loaded",
+    },
   });
 
 export default i18n;
