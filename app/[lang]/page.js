@@ -1,9 +1,9 @@
-// [lang]/page.js
 "use client";
-import React, { Suspense } from "react";
-import LanguageProvider from "../components/LanguageProvider";
-import useLanguage from "../hooks/useLanguage";
+import React from "react";
+import { I18nextProvider } from "react-i18next";
+import i18n from "../../i18n";
 import Header from "../components/Header";
+import useLanguage from "../hooks/useLanguage";
 import FeaturedIn from "../components/Home/FeaturedIn";
 import OurFeature from "../components/Home/OurFeatures";
 import BuiltOn from "../components/Home/BuiltOn";
@@ -15,36 +15,34 @@ const Home = () => {
   useLanguage();
 
   return (
-    <LanguageProvider>
-      <Suspense fallback={<div>Loading...</div>}>
-        <Header />
-        <div className="relative w-full h-[982px]">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="absolute top-0 left-0 w-full h-full object-cover"
-          >
-            <source
-              src="/assets/hero-section-bg.mp4"
-              type="video/mp4"
-              className="w-full h-full"
-            />
-            Your browser does not support the video tag.
-          </video>
+    <I18nextProvider i18n={i18n}>
+      <Header />
+      <div className="relative w-full h-[982px]">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute top-0 left-0 w-full h-full object-cover"
+        >
+          <source
+            src="/assets/hero-section-bg.mp4"
+            type="video/mp4"
+            className="w-full h-full"
+          />
+          Your browser does not support the video tag.
+        </video>
 
-          <div className="w-full h-full absolute inset-0 pt-[185px] max-w-[1272px] mx-auto">
-            <Hero />
-          </div>
+        <div className="w-full h-full absolute inset-0 pt-[185px] max-w-[1272px] mx-auto">
+          <Hero />
         </div>
-        <FeaturedIn />
-        <OurFeature />
-        <BuyNRTX />
-        <BuiltOn />
-        <Footer />
-      </Suspense>
-    </LanguageProvider>
+      </div>
+      <FeaturedIn />
+      <OurFeature />
+      <BuyNRTX />
+      <BuiltOn />
+      <Footer />
+    </I18nextProvider>
   );
 };
 
