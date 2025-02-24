@@ -2,12 +2,42 @@ import SectionHeading from "../SectionHeading";
 import Chart3D from "./Chart3D";
 
 export default function Toeknomics() {
-  const TOKENOMICS_DATA = [
-    { name: "Public & Private Sales", value: 35, color: "#a855f7" },
-    { name: "Ecosystem & Rewards", value: 30, color: "#7e22ce" },
-    { name: "Liquidity & Exchange Listings", value: 20, color: "#9333ea" },
-    { name: "Infrastructure & Development", value: 10, color: "#c084fc" },
-    { name: "Team & Advisors", value: 5, color: "#d8b4fe" },
+  const tokenomicsData = [
+    {
+      name: "Liquidity & Exchange Listings",
+      value: 20,
+      displayValue: 20,
+      height: 85,
+      color: "#7D25C2",
+    },
+    {
+      name: "Infrastructure & Development",
+      value: 15,
+      displayValue: 10,
+      height: 65,
+      color: "#A43CFF",
+    },
+    {
+      name: "Team & Advisors",
+      value: 10,
+      displayValue: 5,
+      height: 50,
+      color: "#A052FF",
+    },
+    {
+      name: "Ecosystem & Rewards",
+      value: 30,
+      displayValue: 30,
+      height: 35,
+      color: "#440675",
+    },
+    {
+      name: "Public & Private Sales",
+      value: 40,
+      displayValue: 35,
+      height: 100,
+      color: "#930DFF",
+    },
   ];
 
   return (
@@ -33,19 +63,19 @@ export default function Toeknomics() {
         <div className="max-w-[1236px] mx-auto mt-[60px] pb-[40px] grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           {/* Legend */}
           <div className="space-y-4">
-            {TOKENOMICS_DATA.map(({ name, value, color }) => (
+            {tokenomicsData.map(({ name, displayValue, color }) => (
               <div key={name} className="flex items-center gap-[22px]">
                 <div
                   className="w-[52px] h-[21px]"
                   style={{ backgroundColor: color }}
                 />
                 <span className="text-white text-[18px] font-poppins">
-                  {name} ({value}%)
+                  {name} ({displayValue}%)
                 </span>
               </div>
             ))}
           </div>
-          <Chart3D />
+          <Chart3D data={tokenomicsData} />
         </div>
       </div>
     </div>

@@ -8,7 +8,7 @@ import am4themes_animated from "@amcharts/amcharts4/themes/animated";
 // Apply the animated theme
 am4core.useTheme(am4themes_animated);
 
-const Chart3D = () => {
+const Chart3D = ({ data }) => {
   const chartDiv = useRef(null);
 
   useLayoutEffect(() => {
@@ -17,43 +17,7 @@ const Chart3D = () => {
     chart.hiddenState.properties.opacity = 0; // initial fade-in
 
     // Add custom tokenomics data with separate height and adjusted values
-    chart.data = [
-      {
-        name: "Liquidity & Exchange Listings",
-        value: 20, // Slightly increased
-        displayValue: 20,
-        height: 85,
-        color: "#7D25C2",
-      },
-      {
-        name: "Infrastructure & Development",
-        value: 15, // Increased from 10
-        displayValue: 10,
-        height: 65,
-        color: "#A43CFF",
-      },
-      {
-        name: "Team & Advisors",
-        value: 10, // Increased from 5
-        displayValue: 5,
-        height: 50,
-        color: "#A052FF",
-      },
-      {
-        name: "Ecosystem & Rewards",
-        value: 30,
-        displayValue: 30,
-        height: 35,
-        color: "#440675",
-      },
-      {
-        name: "Public & Private Sales",
-        value: 40,
-        displayValue: 35,
-        height: 100,
-        color: "#930DFF",
-      },
-    ];
+    chart.data = data;
 
     // Remove inner radius to make it a full pie (not donut)
     chart.innerRadius = 0;
