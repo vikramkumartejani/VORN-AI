@@ -1,23 +1,25 @@
 import SectionHeading from "../SectionHeading";
 import Button from "../Button";
+import { useTranslation } from "react-i18next";
 
 export default function RewardsCalculator() {
+  const { t } = useTranslation();
   const cardData = [
     {
-      title: "30 Days",
-      apr: "APR: 50%",
+      title: t("home.rewardsCalculator.cards.0.title"),
+      apr: t("home.rewardsCalculator.cards.0.apr"),
     },
     {
-      title: "90 Days",
-      apr: "APR: 90%",
+      title: t("home.rewardsCalculator.cards.1.title"),
+      apr: t("home.rewardsCalculator.cards.1.apr"),
     },
     {
-      title: "180 Days",
-      apr: "APR: 120%",
+      title: t("home.rewardsCalculator.cards.2.title"),
+      apr: t("home.rewardsCalculator.cards.2.apr"),
     },
     {
-      title: "360 Days",
-      apr: "APR: 200%",
+      title: t("home.rewardsCalculator.cards.3.title"),
+      apr: t("home.rewardsCalculator.cards.3.apr"),
     },
   ];
 
@@ -28,14 +30,15 @@ export default function RewardsCalculator() {
         alt="graphic"
         className="absolute bottom-0 left-0 w-full"
       />
-      <SectionHeading text="Rewards Calculator" />
+      <SectionHeading text={t("home.rewardsCalculator.title.end")} />
       <h1 className="my-[25px] text-[40px] leading-[44px] font-bold text-white text-center">
-        Staking <span className="text-[#9442ED]">Rewards Calendar</span>
+        {t("home.rewardsCalculator.title.start")}{" "}
+        <span className="text-[#9442ED]">
+          {t("home.rewardsCalculator.title.end")}
+        </span>
       </h1>
       <p className="text-center text-[18px] leading-[27px] font-normal font-poppins text-white/80 max-w-[653px] mx-auto">
-        The VORN AI Staking Program allows users to lock their VRN tokens and
-        earn staking rewards based on the duration of their stake. The longer
-        you stake, the higher your rewards, with APR reaching up to 200%
+        {t("home.rewardsCalculator.description")}
       </p>
 
       {/* Cards Section */}
@@ -60,8 +63,12 @@ export default function RewardsCalculator() {
           </div>
         ))}
       </div>
-      <div className="mx-auto flex w-full justify-center items-center mt-[60px] pb-[160px]">
-        <Button href="/" translationKey="Stake Now" extraClass="h-[47px]" />
+      <div className="mx-auto flex w-full justify-center items-center mt-[60px] pb-[154px]">
+        <Button
+          href="/"
+          translationKey="home.rewardsCalculator.buttonText"
+          extraClass="h-[47px]"
+        />
       </div>
     </div>
   );

@@ -1,53 +1,55 @@
 import SectionHeading from "../SectionHeading";
+import { useTranslation } from "react-i18next";
 
 export default function RoadMap() {
+  const { t } = useTranslation();
   const phaseData = [
     {
-      quarter: "Q1 2025",
-      title: "Research & Development",
+      quarter: t("home.roadMap.phases.0.quarter"),
+      title: t("home.roadMap.phases.0.title"),
       items: [
-        "Market Research",
-        "Whitepaper Release",
-        "Tokenomics Design",
-        "Technical Architecture",
-        "Community Building",
-        "Early Partnerships",
+        t("home.roadMap.items.marketResearch"),
+        t("home.roadMap.items.whitepaperRelease"),
+        t("home.roadMap.items.tokenomicsDesign"),
+        t("home.roadMap.items.technicalArchitecture"),
+        t("home.roadMap.items.communityBuilding"),
+        t("home.roadMap.items.earlyPartnerships"),
       ],
     },
     {
-      quarter: "Q2 2025",
-      title: "Prototype / Testnet Launch",
+      quarter: t("home.roadMap.phases.1.quarter"),
+      title: t("home.roadMap.phases.1.title"),
       items: [
-        "AI Compute Grid Testnet",
-        "RWA Tokenization Beta",
-        "DePIN Node Deployment",
-        "AI-DAO Prototype",
-        "Smart Contract Audits",
-        "Testnet Incentive Program",
+        t("home.roadMap.items.aiComputeGridTestnet"),
+        t("home.roadMap.items.rwaTokenizationBeta"),
+        t("home.roadMap.items.depinNodeDeployment"),
+        t("home.roadMap.items.aiDaoPrototype"),
+        t("home.roadMap.items.smartContractAudits"),
+        t("home.roadMap.items.testnetIncentiveProgram"),
       ],
     },
     {
-      quarter: "Q3 2025",
-      title: "Mainnet Launch",
+      quarter: t("home.roadMap.phases.2.quarter"),
+      title: t("home.roadMap.phases.2.title"),
       items: [
-        "Mainnet Deployment",
-        "RWA Marketplace",
-        "AI-Managed Staking Pools",
-        "Energy Trading Platform",
-        "CEX/DEX Listings",
-        "Ecosystem Incentives",
+        t("home.roadMap.items.mainnetDeployment"),
+        t("home.roadMap.items.rwaMarketplace"),
+        t("home.roadMap.items.aiManagedStakingPools"),
+        t("home.roadMap.items.energyTradingPlatform"),
+        t("home.roadMap.items.cexDexListings"),
+        t("home.roadMap.items.ecosystemIncentives"),
       ],
     },
     {
-      quarter: "Q4 2025",
-      title: "Scaling & Global Adoption",
+      quarter: t("home.roadMap.phases.3.quarter"),
+      title: t("home.roadMap.phases.3.title"),
       items: [
-        "AI Model Marketplace",
-        "Cross-Chain Compatibility",
-        "Layer 2 Scaling",
-        "Enterprise Integrations",
-        "RWA Expansion",
-        "Global Outreach",
+        t("home.roadMap.items.aiModelMarketplace"),
+        t("home.roadMap.items.crossChainCompatibility"),
+        t("home.roadMap.items.layer2Scaling"),
+        t("home.roadMap.items.enterpriseIntegrations"),
+        t("home.roadMap.items.rwaExpansion"),
+        t("home.roadMap.items.globalOutreach"),
       ],
     },
   ];
@@ -59,13 +61,12 @@ export default function RoadMap() {
         alt="bg-graphic"
         className="absolute bottom-0 left-0 w-full"
       />
-      <SectionHeading text="VORN AI Roadmap" />
+      <SectionHeading text={t("home.roadMap.subTitle")} />
       <h1 className="my-[25px] text-[40px] leading-[44px] font-bold text-white text-center">
-        Pioneering the Future of Decentralized AI
+        {t("home.roadMap.title")}
       </h1>
       <p className="text-center text-[18px] leading-[27px] font-normal font-poppins text-white/80 max-w-[653px] mx-auto">
-        Our roadmap outlines the journey towards a scalable, secure, and fully
-        autonomous AI ecosystem.
+        {t("home.roadMap.description")}
       </p>
 
       {/* Cards Section */}

@@ -1,28 +1,28 @@
 import SectionHeading from "../SectionHeading";
 import Image from "next/image";
 import Button from "../Button";
+import { useTranslation } from "react-i18next";
 
 export default function EarnRewards() {
+  const { t } = useTranslation();
   const cardData = [
     {
       icon: "/assets/icons/cart.svg",
-      title: "Buy VRN Tokens",
-      description: "Connect your wallet and purchase VRN to get started.",
-      buttonText: "Buy Now",
+      title: t("home.earnRewards.cards.0.title"),
+      description: t("home.earnRewards.cards.0.description"),
+      buttonText: t("home.earnRewards.cards.0.buttonText"),
       hasButton: true,
     },
     {
       icon: "/assets/icons/lock.svg",
-      title: "Stake VRN",
-      description: `Go to the "Staking" section on the platform.
-        Choose a staking duration that fits your strategy. Longer staking = higher rewards & governance power.`,
+      title: t("home.earnRewards.cards.1.title"),
+      description: t("home.earnRewards.cards.1.description"),
       hasButton: false,
     },
     {
       icon: "/assets/icons/bag.svg",
-      title: "Earn Rewards",
-      description: `Monitor your rewards in real-time and claim earnings when available.
-        Rewards are distributed based on network contributions. Reinvest or withdraw as per platform rules.`,
+      title: t("home.earnRewards.cards.2.title"),
+      description: t("home.earnRewards.cards.2.description"),
       hasButton: false,
     },
   ];
@@ -46,14 +46,15 @@ export default function EarnRewards() {
           opacity: 0.3,
         }}
       />
-      <SectionHeading text="Earn Rewards" />
-      <h1 className="my-[25px] text-[40px] leading-[44px] font-bold text-white text-center">
-        <span className="text-[#9442ED]">Stake VRN & Earn</span> Passive Income
-        Effortlessly
+      <SectionHeading text={t("home.earnRewards.title.start")} />
+      <h1 className="my-[25px] text-[40px] leading-[44px] font-bold text-white text-center text-center">
+        <span className="text-[#9442ED]">
+          {t("home.earnRewards.title.start")}
+        </span>{" "}
+        {t("home.earnRewards.title.end")}
       </h1>
       <p className="text-center text-[18px] leading-[27px] font-normal font-poppins text-white/80 max-w-[811px] mx-auto">
-        Lock your VRN tokens in the VORN AI ecosystem, contribute to
-        decentralized AI and infrastructure, and earn rewards.
+        {t("home.earnRewards.description")}
       </p>
 
       {/* Cards Section */}

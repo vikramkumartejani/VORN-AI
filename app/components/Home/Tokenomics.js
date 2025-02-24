@@ -1,38 +1,40 @@
 import SectionHeading from "../SectionHeading";
 import Chart3D from "./Chart3D";
+import { useTranslation } from "react-i18next";
 
-export default function Toeknomics() {
+export default function Tokenomics() {
+  const { t } = useTranslation();
   const tokenomicsData = [
     {
-      name: "Liquidity & Exchange Listings",
+      name: t("home.tokenomics.liquidityAndExchangeListings"),
       value: 20,
       displayValue: 20,
       height: 85,
       color: "#7D25C2",
     },
     {
-      name: "Infrastructure & Development",
+      name: t("home.tokenomics.infrastructureAndDevelopment"),
       value: 15,
       displayValue: 10,
       height: 65,
       color: "#A43CFF",
     },
     {
-      name: "Team & Advisors",
+      name: t("home.tokenomics.teamAndAdvisors"),
       value: 10,
       displayValue: 5,
       height: 50,
       color: "#A052FF",
     },
     {
-      name: "Ecosystem & Rewards",
+      name: t("home.tokenomics.ecosystemAndRewards"),
       value: 30,
       displayValue: 30,
       height: 35,
       color: "#440675",
     },
     {
-      name: "Public & Private Sales",
+      name: t("home.tokenomics.publicAndPrivateSales"),
       value: 40,
       displayValue: 35,
       height: 100,
@@ -41,22 +43,22 @@ export default function Toeknomics() {
   ];
 
   return (
-    <div className="min-h-screen bg-black px-4 md:px-5 py-24 relative overflow-hidden">
+    <div className="xl:h-[950px] lg:h-[950px] md:h-[1200px] sm:h-[1200px] h-[1300px] bg-black px-4 md:px-5 pt-20 pb-0 relative overflow-hidden">
       <img
         src="/assets/tokenomics-bg.svg"
         alt="bg-graphic"
         className="absolute bottom-0 left-0 w-full z-[1]"
       />
       <div className="relative z-[2]">
-        <SectionHeading text="Tokenomics" />
+        <SectionHeading text={t("home.tokenomics.subTitle")} />
         <h1 className="my-[25px] text-[40px] leading-[44px] font-bold text-white text-center">
-          <span className="text-[#9442ED]">Tokenomics: </span> The Economy of
-          VORN AI
+          <span className="text-[#9442ED]">
+            {t("home.tokenomics.title.start")}
+          </span>{" "}
+          {t("home.tokenomics.title.end")}
         </h1>
         <p className="text-center text-[18px] leading-[27px] font-normal font-poppins text-white/80 max-w-[811px] mx-auto">
-          The VORN AI ($VRN) ecosystem is designed for long-term sustainability,
-          balancing utility, rewards, and governance. Below is the token
-          distribution model ensuring growth, security, and decentralization.
+          {t("home.tokenomics.description")}
         </p>
 
         {/* Cards Section */}
