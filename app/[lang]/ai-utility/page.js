@@ -7,6 +7,7 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import IntelligentAutomation from '../../components/AIUtility/IntelligentAutomation'
 import AIUtilityServices from '../../components/AIUtility/AIUtilityServices'
+import Timeline from '../../components/AIUtility/Timeline'
 
 const AIUtility = () => {
   useLanguage();
@@ -33,6 +34,7 @@ const AIUtility = () => {
 
       <IntelligentAutomation />
       <AIUtilityServices/>
+      <Timeline/>
 
       <Footer />
     </I18nextProvider>
