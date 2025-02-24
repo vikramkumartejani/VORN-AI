@@ -115,7 +115,7 @@ const Chart3D = () => {
   return (
     <div
       id="chartdiv"
-      className="w-[561px] h-[500px] mx-auto my-auto"
+      className="w-[650px] h-[650px] mx-auto my-auto mt-[30px]"
       ref={chartDiv}
     ></div>
   );

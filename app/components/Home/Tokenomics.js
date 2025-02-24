@@ -30,7 +30,7 @@ export default function Toeknomics() {
         </p>
 
         {/* Cards Section */}
-        <div className="max-w-[1236px] mx-auto mt-[75px] pb-[40px] grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+        <div className="max-w-[1236px] mx-auto mt-[60px] pb-[40px] grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           {/* Legend */}
           <div className="space-y-4">
             {TOKENOMICS_DATA.map(({ name, value, color }) => (
