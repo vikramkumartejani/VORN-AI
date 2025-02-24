@@ -11,6 +11,7 @@ import BuyNRTX from "../components/Home/BuyNRTX";
 import EarnRewards from "../components/Home/EarnRewards";
 import RewardsCalculator from "../components/Home/RewardsCalculator";
 import RoadMap from "../components/Home/RoadMap";
+import Tokenomics from "../components/Home/Tokenomics";
 import FAQ from "../components/Home/FAQ";
 import Footer from "../components/Footer";
 import Hero from "../components/Home/Hero";
@@ -47,6 +48,7 @@ const Home = () => {
       <EarnRewards />
       <RewardsCalculator />
       <RoadMap />
+      <Tokenomics />
       <BuiltOn />
       <FAQ />
       <Footer />
