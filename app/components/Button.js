@@ -8,7 +8,8 @@ export default function LocalizedButtonLink({
   href = "/",
   text = "",
   translationKey = "",
-  extraClass = ""
+  extraClass = "h-[41px]",
+  paddingx = "px-[35px]",
 }) {
   const { t, i18n } = useTranslation();
   const [isHovered, setIsHovered] = useState(false);
@@ -37,14 +38,14 @@ export default function LocalizedButtonLink({
   return (
     <Link
       href={createLocalizedPath(href)}
-      className={`${styles.stakingButton} ${extraClass} ${isHovered ? styles.hovered : ""}`}
+      className={`${styles.stakingButton} ${extraClass} ${
+        isHovered ? styles.hovered : ""
+      }`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
       <div className={styles.gradientBorder} />
-      <div className={styles.buttonContent}>
-        {displayText}
-      </div>
+      <div className={`${styles.buttonContent} ${paddingx}`}>{displayText}</div>
       <div className={styles.glowEffect} />
     </Link>
   );

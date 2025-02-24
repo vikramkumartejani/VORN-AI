@@ -8,6 +8,10 @@ import FeaturedIn from "../components/Home/FeaturedIn";
 import OurFeature from "../components/Home/OurFeatures";
 import BuiltOn from "../components/Home/BuiltOn";
 import BuyNRTX from "../components/Home/BuyNRTX";
+import EarnRewards from "../components/Home/EarnRewards";
+import RewardsCalculator from "../components/Home/RewardsCalculator";
+import RoadMap from "../components/Home/RoadMap";
+import FAQ from "../components/Home/FAQ";
 import Footer from "../components/Footer";
 import Hero from "../components/Home/Hero";
 
@@ -40,7 +44,11 @@ const Home = () => {
       <FeaturedIn />
       <OurFeature />
       <BuyNRTX />
+      <EarnRewards />
+      <RewardsCalculator />
+      <RoadMap />
       <BuiltOn />
+      <FAQ />
       <Footer />
     </I18nextProvider>
   );
