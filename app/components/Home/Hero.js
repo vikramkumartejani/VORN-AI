@@ -66,7 +66,7 @@ const Hero = () => {
                 </div>
             </div>
 
-            <div className='h-[728px] py-[30px] w-[504px] rounded-[20px] bg-[#15012D0D] border border-[#842DFF]' style={{ backdropFilter: "blur(100px)" }}>
+            <div className='h-[735px] py-[30px] w-[504px] rounded-[20px] bg-[#15012D0D] border border-[#842DFF]' style={{ backdropFilter: "blur(100px)" }}>
                 <BuyNowBox />
             </div>
         </div>

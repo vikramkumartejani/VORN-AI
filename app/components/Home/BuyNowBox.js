@@ -8,6 +8,19 @@ const tabs = [
     { id: "BNB", label: "BNB", icon: "/assets/icons/bnb.svg" },
 ];
 
+const currenciesByChain = {
+    ETH: [
+        { name: "ETH", icon: "/assets/icons/eth.svg" },
+        { name: "USDC", icon: "/assets/icons/eth.svg" },
+        { name: "USDT", icon: "/assets/icons/eth.svg" },
+    ],
+    BNB: [
+        { name: "BNB", icon: "/assets/icons/bnb.svg" },
+        { name: "BUSD", icon: "/assets/icons/bnb.svg" },
+        { name: "CAKE", icon: "/assets/icons/bnb.svg" },
+    ]
+};
+
 const infoItems = [
     {
         icon: '/assets/icons/refer-earn.svg',
@@ -26,18 +39,18 @@ const infoItems = [
     },
 ];
 
-const currencies = [
-    { name: "ETH", icon: "/assets/icons/eth.svg" },
-    { name: "USDC", icon: "/assets/icons/eth.svg" },
-    { name: "USDT", icon: "/assets/icons/eth.svg" },
-];
-
 const BuyNowBox = () => {
     const [isHovered, setIsHovered] = useState(false);
     const [activeTab, setActiveTab] = useState("ETH");
-    const [selectedCurrency, setSelectedCurrency] = useState(currencies[0]);
+    const [currencies, setCurrencies] = useState(currenciesByChain.ETH);
+    const [selectedCurrency, setSelectedCurrency] = useState(currenciesByChain.ETH[0]);
     const [isOpen, setIsOpen] = useState(false);
     const dropdownRef = useRef(null);
+
+    useEffect(() => {
+        setCurrencies(currenciesByChain[activeTab]);
+        setSelectedCurrency(currenciesByChain[activeTab][0]);
+    }, [activeTab]);
 
     // Close dropdown when clicking outside
     useEffect(() => {
@@ -49,6 +62,15 @@ const BuyNowBox = () => {
         document.addEventListener("mousedown", handleClickOutside);
         return () => document.removeEventListener("mousedown", handleClickOutside);
     }, []);
+
+    // Percent
+    const [activePercent, setActivePercent] = useState('5%');
+
+    const percentOptions = ['5%', '10%', '15%'];
+
+    const handlePercentClick = (percent) => {
+        setActivePercent(percent);
+    };
 
     return (
         <div className='text-center w-full'>
@@ -83,12 +105,12 @@ const BuyNowBox = () => {
             </div>
 
             <div className='px-[30px]'>
+                {/* Tab ETH & BNB */}
                 <div className="my-5 border border-[#8616DF] rounded-[9px] p-[5px] flex items-center justify-between">
                     {tabs.map((tab) => (
                         <button
                             key={tab.id}
-                            className={`h-[50px] w-full rounded-lg flex items-center justify-center gap-2.5 ${activeTab === tab.id ? "border border-[#FFFFFF26]" : ""
-                                }`}
+                            className={`h-[50px] w-full rounded-lg flex items-center justify-center gap-2.5 ${activeTab === tab.id ? "border border-[#FFFFFF26]" : ""}`}
                             style={
                                 activeTab === tab.id
                                     ? { background: "radial-gradient(42.46% 123.69% at 57.02% 58.9%, #A761FF 0%, #490A84 100%)" }
@@ -104,6 +126,7 @@ const BuyNowBox = () => {
                     ))}
                 </div>
 
+                {/* Listing price */}
                 <div className='w-full justify-center flex items-center gap-4'>
                     <Image src="/assets/heading-arrow.svg" alt='arrow' width={110} height={1} />
                     <div
@@ -117,70 +140,87 @@ const BuyNowBox = () => {
 
                 {/* Choose amount & $VRN you receive */}
                 <div className='mt-5 flex items-center gap-5'>
-                    <div className='w-full h-[50px] rounded-lg border border-[#8616DF] flex items-center justify-between gap-3 pl-4 pr-[5px]'>
-                        <input type='text' placeholder='0.00' className='w-full bg-transparent outline-none placeholder:text-white/80 text-white text-base font-normal' />
-                        {/* Dropdown */}
-                        <div ref={dropdownRef} className="relative inline-block">
-                            {/* Dropdown Button */}
-                            <div
-                                className={`h-10 max-w-[100px] min-w-[94px] flex items-center gap-2 justify-between px-1.5 py-2 rounded-t-[10px] ${isOpen ? "rounded-b-none" : "rounded-[10px]"
-                                    } bg-[#762CC5] border border-[#A66CFD] cursor-pointer`}
-                                onClick={() => setIsOpen(!isOpen)}
-                            >
-                                <div className="flex items-center">
-                                    <Image src={selectedCurrency.icon} alt={selectedCurrency.name} width={22} height={22} />
-                                    <h3 className="text-white text-[14px] leading-[18px] font-normal ">{selectedCurrency.name}</h3>
-                                </div>
-                                <Image src="/assets/icons/caret-down.svg" alt="arrow" width={14} height={14} />
-                            </div>
+                    {/* Choose amount */}
+                    <div className='flex flex-col gap-2 items-start w-full'>
+                        <h2 className='text-[14px] leading-[16.8px] font-bold text-white'>Choose amount</h2>
+                        <div className='w-full h-[50px] rounded-lg border border-[#8616DF] flex items-center justify-between gap-3 pl-4 pr-[5px]'>
+                            <input type='text' placeholder='0.00' className='w-full bg-transparent outline-none placeholder:text-white/80 text-white text-base font-normal' />
 
-                            {/* Dropdown List */}
-                            {isOpen && (
-                                <div className="absolute top-[40px] space-y-[9px] left-0 w-full bg-[#762CC5] border border-t-0 border-[#A66CFD] py-3 rounded-t-none rounded-[10px] text-white shadow-lg z-10">
-                                    {currencies.map((currency) => (
-                                        <div
-                                            key={currency.name}
-                                            className="flex items-center gap-2 px-3 cursor-pointer space-y-2"
-                                            onClick={() => {
-                                                setSelectedCurrency(currency);
-                                                setIsOpen(false);
-                                            }}
-                                        >
-                                            <span className='text-[15px] leading-[18px] font-light'>{currency.name}</span>
-                                        </div>
-                                    ))}
+                            {/* Dropdown */}
+                            <div ref={dropdownRef} className="relative inline-block">
+                                {/* Dropdown Button */}
+                                <div
+                                    className={`h-10 max-w-[100px] min-w-[94px] flex items-center justify-between px-1.5 py-2 rounded-t-[10px] ${isOpen ? "rounded-b-none" : "rounded-[10px]"} bg-[#762CC5] border border-[#A66CFD] cursor-pointer`}
+                                    onClick={() => setIsOpen(!isOpen)}
+                                >
+                                    <div className="flex items-center">
+                                        <Image src={selectedCurrency.icon} alt={selectedCurrency.name} width={22} height={22} />
+                                        <h3 className="text-white text-[14px] leading-[18px] font-normal ml-[4px]">{selectedCurrency.name}</h3>
+                                    </div>
+                                    <Image src="/assets/icons/caret-down.svg" alt="arrow" width={14} height={14} />
                                 </div>
-                            )}
+
+                                {/* Dropdown List */}
+                                {isOpen && (
+                                    <div className="absolute top-[40px] space-y-[9px] left-0 w-full bg-[#762CC5] border border-t-0 border-[#A66CFD] py-3 rounded-t-none rounded-[10px] text-white shadow-lg z-10">
+                                        {currencies.map((currency) => (
+                                            <div
+                                                key={currency.name}
+                                                className="flex items-center gap-2 px-3 cursor-pointer space-y-2"
+                                                onClick={() => {
+                                                    setSelectedCurrency(currency);
+                                                    setIsOpen(false);
+                                                }}
+                                            >
+                                                <span className='text-[15px] leading-[18px] font-light'>{currency.name}</span>
+                                            </div>
+                                        ))}
+                                    </div>
+                                )}
+                            </div>
                         </div>
                     </div>
-
-                    <div className='w-full h-[50px] rounded-lg border border-[#8616DF] flex items-center justify-between px-4 gap-5'>
-                        <input type='text' placeholder='0.00' className='w-full bg-transparent outline-none placeholder:text-white/80 text-white text-base font-normal' />
-                        <Image src='/assets/icons/meta.svg' alt='meta' width={24} height={24} />
+                    {/* $VRN you receive */}
+                    <div className='flex flex-col gap-2 items-start w-full'>
+                        <h2 className='text-[14px] leading-[16.8px] font-bold text-white'>$VRN you receive</h2>
+                        <div className='w-full h-[50px] rounded-lg border border-[#8616DF] flex items-center justify-between px-4 gap-5'>
+                            <input type='text' placeholder='0.00' className='w-full bg-transparent outline-none placeholder:text-white/80 text-white text-base font-normal' />
+                            <Image src='/assets/icons/meta.svg' alt='meta' width={24} height={24} />
+                        </div>
                     </div>
                 </div>
-
 
                 {/* Available Bonus */}
                 <div className='my-5 space-y-[11px]'>
                     <h3 className='text-white text-[14px] leading-[16.8px] font-bold text-left'>Available Bonus</h3>
-                    <div className='grid grid-cols-3 gap-2.5'>
-                        <div className='border border-[#FFFFFF26] rounded-lg p-[7px] text-[14px] font-medium' style={{ background: "radial-gradient(42.46% 123.69% at 57.02% 58.9%, #A761FF 0%, #490A84 100%)" }}>5%</div>
-                        <div className='border border-[#FFFFFF26] rounded-lg p-[7px] text-[14px] font-medium'>10%</div>
-                        <div className='border border-[#FFFFFF26] rounded-lg p-[7px] text-[14px] font-medium'>15%</div>
+                    <div className="grid grid-cols-3 gap-[11px]">
+                        {percentOptions.map((percent) => (
+                            <button
+                                key={percent}
+                                className={`border border-[#8616DF] rounded-lg p-2 text-[14px] leading-[16.8px] font-medium ${activePercent === percent ? 'text-white' : 'text-white'
+                                    }`}
+                                style={
+                                    activePercent === percent
+                                        ? { background: "radial-gradient(42.46% 123.69% at 57.02% 58.9%, #A761FF 0%, #490A84 100%)" }
+                                        : {}
+                                }
+                                onClick={() => handlePercentClick(percent)}
+                            >
+                                {percent}
+                            </button>
+                        ))}
                     </div>
                     <p className='text-white/90 text-[14px] font-normal leading-[16.8px] text-left'>Spend $299.90 more to get 10% bonus tokens</p>
                 </div>
 
+                {/* Buy Now */}
                 <button
                     className={`${styles.stakingButtonBuyNow} ${isHovered ? styles.hovered : ""}`}
                     onMouseEnter={() => setIsHovered(true)}
                     onMouseLeave={() => setIsHovered(false)}
                 >
                     <div className={styles.gradientBorder} />
-                    <div className={styles.buttonContentBuyNow}>
-                        Buy Now
-                    </div>
+                    <h3 className={styles.buttonContentBuyNow}>Buy Now</h3>
                     <div className={styles.glowEffectBuyNow} />
                 </button>
 
