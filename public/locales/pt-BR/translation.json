@@ -214,6 +214,69 @@
       "answer5": "Os RWAs tokenizados (Ativos do Mundo Real) na VORN.AI são representações digitais de ativos físicos na blockchain. Isso inclui imóveis, infraestrutura, commodities e outros ativos tangíveis que foram convertidos em tokens digitais negociáveis."
     }
   },
+  "aiUtility": {
+    "title": "Utilidade de IA",
+    "description": "Explore as várias utilidades da IA em nossa plataforma.",
+    "intelligentAutomation": {
+      "title": "Automação Inteligente para Operações Eficientes, Seguras e Descentralizadas",
+      "description": "VORN.AI melhora a eficiência computacional, automatiza contratos inteligentes, prevê tendências de mercado, fortalece a segurança contra fraudes e otimiza a governança para garantir operações descentralizadas contínuas e confiáveis."
+    },
+    "services": {
+      "title": "Serviços de Utilidade de IA",
+      "subtitle": "para Automação Fluida e Lucrativa"
+    },
+    "timeline": {
+      "first": {
+        "title": "Grade de Computação Impulsionada por IA:",
+        "description": "Este serviço gerencia recursos descentralizados de GPU/CPU, alocando dinamicamente cargas de trabalho de IA e aprendizado de máquina para os nós mais adequados, garantindo soluções de computação econômicas para desenvolvedores e recompensas para provedores de recursos."
+      },
+      "second": {
+        "title": "Sistema de Gestão de Rendimento de IA:",
+        "description": "O sistema de gestão de rendimento de IA ajusta as recompensas de staking em tempo real com base no desempenho da rede, utilização de ativos e necessidades de liquidez, oferecendo aos usuários oportunidades de renda passiva otimizadas por meio de pools de staking gerenciados por IA."
+      },
+      "third": {
+        "title": "Marketplace de Energia Otimizado por IA:",
+        "description": "O marketplace de energia otimizado por IA equilibra a oferta e a demanda de energia renovável selecionada, prevendo ciclos e consumo, precificando dinamicamente os lucros de negociação e facilitando o comércio de energia entre pares."
+      }
+    }
+  },
+  "staking": {
+    "totalVRNBalance": "Saldo Total $VRN",
+    "stakingReward": "Recompensa de Staking",
+    "referralEarnings": "Seus Ganhos de Referência",
+    "stakingSection": {
+      "title": "Staking",
+      "totalStaking": "Total Staking",
+      "stakingPeriod": "Período de Staking",
+      "apr": "APR {{apr}}",
+      "placeholder": "10.000,00 VRN",
+      "max": "MÁXIMO",
+      "stakeNow": "APOSTAR AGORA",
+      "stakeAmount": "Valor da Aposta",
+      "estimatedProfit": "Lucro Estimado",
+      "total": "Total",
+      "lcaiToBeLocked": "LCAI a ser bloqueado",
+      "duration": "Duração",
+      "unlockOn": "Desbloquear em"
+    },
+    "referral": {
+      "title": "Referência",
+      "totalReferrals": "Total de Referências",
+      "totalEarnedAmount": "Total Ganho",
+      "yourReferralLink": "Seu Link de Referência:",
+      "copied": "Copiado!"
+    },
+    "leaderboard": {
+      "title": "Classificação",
+      "sr": "SR",
+      "user": "Usuário",
+      "amount": "Quantidade $VRN"
+    }
+  },
+  "depin": {
+    "title": "DePIN – A Espinha Dorsal da VORN.AI",
+    "description": "DePIN na VORN.AI fornece os recursos físicos para o ecossistema, como nós de computação, dispositivos de armazenamento e redes de energia, permitindo que os usuários monetizem sua infraestrutura enquanto alimentam operações descentralizadas."
+  },
   "footer": {
     "description": "VORN.AI – Impulsionando o futuro da inteligência descentralizada. Movido por IA. Alimentado por infraestrutura. Ativos tokenizados.",
     "product": {

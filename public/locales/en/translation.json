@@ -214,6 +214,69 @@
       "answer5": "Tokenized RWAs (Real World Assets) in VORN.AI are digital representations of physical assets on the blockchain. This includes real estate, infrastructure, commodities, and other tangible assets that have been converted into tradable digital tokens."
     }
   },
+  "aiUtility": {
+    "title": "AI Utility",
+    "description": "Explore the various utilities of AI in our platform.",
+    "intelligentAutomation": {
+      "title": "Intelligent Automation for Efficient, Secure & Decentralized Operations",
+      "description": "VORN.AI enhances computing efficiency, automates smart contracts, predicts market trends, strengthens security against fraud, and optimizes governance to ensure seamless and trustless decentralized operations."
+    },
+    "services": {
+      "title": "AI Utility Services",
+      "subtitle": "for Seamless and Profitable Automation"
+    },
+    "timeline": {
+      "first": {
+        "title": "AI-Powered Compute Grid:",
+        "description": "This service manages decentralized GPU/CPU resources, dynamically allocating AI and machine learning workloads to the most suitable nodes, ensuring cost-effective compute solutions for developers and rewards for resource providers."
+      },
+      "second": {
+        "title": "AI Yield Management System:",
+        "description": "The AI yield management system adjusts staking rewards in real-time based on network performance, asset utilization, and liquidity needs, offering users optimized passive income opportunities through AI-managed staking pools."
+      },
+      "third": {
+        "title": "AI-Optimized Energy Marketplace:",
+        "description": "The AI-optimized energy marketplace balances supply and demand for selected renewable energy by predicting cycles and consumption, dynamically pricing trading profits, and facilitating peer-to-peer energy trading."
+      }
+    }
+  },
+  "staking": {
+    "totalVRNBalance": "Total $VRN Balance",
+    "stakingReward": "Staking Reward",
+    "referralEarnings": "Your Referral Earnings",
+    "stakingSection": {
+      "title": "Staking",
+      "totalStaking": "Total Staking",
+      "stakingPeriod": "Staking period",
+      "apr": "APR {{apr}}",
+      "placeholder": "10,000.00 VRN",
+      "max": "MAX",
+      "stakeNow": "STAKE NOW",
+      "stakeAmount": "Stake amount",
+      "estimatedProfit": "Estimated Profit",
+      "total": "Total",
+      "lcaiToBeLocked": "LCAI to be locked",
+      "duration": "Duration",
+      "unlockOn": "Unlock On"
+    },
+    "referral": {
+      "title": "Referral",
+      "totalReferrals": "Total Referrals",
+      "totalEarnedAmount": "Total Earned Amount",
+      "yourReferralLink": "Your Referral Link:",
+      "copied": "Copied!"
+    },
+    "leaderboard": {
+      "title": "Leaderboard",
+      "sr": "SR",
+      "user": "User",
+      "amount": "$VRN Amount"
+    }
+  },
+  "depin": {
+    "title": "DePIN – The Backbone of VORN.AI",
+    "description": "DePIN in VORN.AI provides the physical resources for the ecosystem, such as computing nodes, storage devices, and energy grids, enabling users to monetize their infrastructure while powering decentralized operations."
+  },
   "footer": {
     "description": "VORN.AI – Powering the Future of Decentralized Intelligence AI-Driven. Infrastructure-Powered. Asset-Tokenized.",
     "product": {
