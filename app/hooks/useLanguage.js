@@ -1,12 +1,10 @@
-// hooks/useLanguage.js
 "use client";
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import { useRouter, usePathname } from "next/navigation";
+import { usePathname } from "next/navigation";
 
 const useLanguage = () => {
   const { i18n } = useTranslation();
-  const router = useRouter();
   const pathname = usePathname();
 
   useEffect(() => {
