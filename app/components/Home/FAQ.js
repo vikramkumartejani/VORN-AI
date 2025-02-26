@@ -80,11 +80,11 @@ export default function FAQ() {
                     isOpen ? "rotate-180" : ""
                   }`}
                 /> */}
-                <button  className={`transition-transform duration-300 ${
+                <div  className={`transition-transform duration-300 ${
                     isOpen ? "" : "rotate-180"
                   }`}>
                   <Image src='/assets/icons/faq-arrow.svg' alt="faq-arrow" width={24} height={24} />
-                </button>
+                </div>
               </button>
 
               <div
