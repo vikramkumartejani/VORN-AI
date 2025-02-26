@@ -40,7 +40,7 @@ const Home = () => {
 
         {/* Overlay + Content Container */}
         <div className="relative w-full z-10">
-          <div className="container mx-auto px-6 pt-[130px] lg:pt-[185px] pb-[50px] sm:pb-16">
+          <div className="max-w-[1296px] mx-auto px-6 pt-[130px] lg:pt-[185px] pb-[50px] sm:pb-16">
             <Hero />
           </div>
         </div>
