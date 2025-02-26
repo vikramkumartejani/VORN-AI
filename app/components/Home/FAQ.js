@@ -71,7 +71,7 @@ export default function FAQ() {
                 className="w-full text-left flex items-center justify-between relative"
                 aria-expanded={isOpen}
               >
-                <span className="text-white text-[18px] font-[600] font-poppins">
+                <span className="text-white text-[18px] leading-[27px] font-semibold font-poppins">
                   {t(faq.question)}
                 </span>
                 <IoIosArrowDown
@@ -88,7 +88,7 @@ export default function FAQ() {
                     : "max-h-0 opacity-0"
                 }`}
               >
-                <div className="text-[#FFFFFFCC] text-[18px] font-poppins pe-[26px]">
+                <div className="text-white/80 text-[18px] leading-[27px] font-poppins pr-5">
                   {t(faq.answer)}
                 </div>
               </div>
