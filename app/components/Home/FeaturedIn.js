@@ -5,7 +5,12 @@ import { useTranslation } from "react-i18next";
 const FeaturedIn = () => {
   const { t } = useTranslation();
   const logos = [
-    { src: "/assets/coin-gape.svg", alt: "coin-gape", width: 159, height: 44 },
+    { 
+      src: "/assets/coin-gape.svg", 
+      alt: "coin-gape", 
+      width: 159, 
+      height: 44 
+    },
     {
       src: "/assets/analytics-insight.svg",
       alt: "analytics-insight",
@@ -34,7 +39,7 @@ const FeaturedIn = () => {
 
   return (
     <div className="bg-black w-full">
-      <div className="max-w-[1267px] mx-auto w-full py-[57px] flex items-center gap-[26px]">
+      <div className="max-w-[1267px] mx-auto w-full py-[46px] sm:py-[57px] flex items-center gap-[26px]">
         <h2 className="text-white text-[32px] font-bold leading-[26px] text-nowrap">
           {t("home.featuredIn.title")}
         </h2>

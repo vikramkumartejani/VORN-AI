@@ -154,6 +154,26 @@
   --scale: 1.05;
 }
 
+@media screen and (max-width: 480px) {
+  .stakingButtonBuyNow {
+    height: 39px;
+    border-radius: 6px;
+  }
+  .glowEffectBuyNow {
+    height: 39px;
+  }
+  .buttonContentBuyNow {
+    border-radius: 6px;
+    font-size: 14px;
+  }
+  .gradientBorder {
+    border-radius: 6px;
+  }
+  .stakingButtonBuyNow::before {
+    border-radius: 6px;
+  }
+}
+
 /* Button Audit */
 .stakingButtonAudit {
   position: relative;

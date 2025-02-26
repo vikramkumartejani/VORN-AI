@@ -22,13 +22,13 @@ const Home = () => {
   return (
     <I18nextProvider i18n={i18n}>
       <Header />
-      <div className="relative w-full h-[982px]">
+      <div className="relative w-full h-[1320px] sm:h-[125vh] md:h-[123vh] lg:h-[982px]">
         <video
           autoPlay
           loop
           muted
           playsInline
-          className="absolute top-0 left-0 w-full h-full object-cover"
+          className="absolute top-0 left-0 w-full min-h-full object-cover"
         >
           <source
             src="/assets/hero-section-bg.mp4"
@@ -38,20 +38,20 @@ const Home = () => {
           Your browser does not support the video tag.
         </video>
 
-        <div className="w-full h-full absolute inset-0 pt-[185px] max-w-[1272px] mx-auto">
+        <div className="w-full h-full absolute inset-0 pt-[130px] lg:pt-[185px] max-w-[1296px] mx-auto px-6">
           <Hero />
         </div>
       </div>
       <FeaturedIn />
-      <OurFeature />
-      <BuyNRTX />
-      <EarnRewards />
-      <RewardsCalculator />
-      <RoadMap />
-      <Tokenomics />
-      <BuiltOn />
-      <FAQ />
-      <Footer />
+      {/* <OurFeature /> */}
+      {/* <BuyNRTX /> */}
+      {/* <EarnRewards /> */}
+      {/* <RewardsCalculator /> */}
+      {/* <RoadMap /> */}
+      {/* <Tokenomics /> */}
+      {/* <BuiltOn /> */}
+      {/* <FAQ /> */}
+      {/* <Footer /> */}
     </I18nextProvider>
   );
 };
