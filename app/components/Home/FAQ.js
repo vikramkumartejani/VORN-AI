@@ -4,6 +4,7 @@ import { useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 import SectionHeading from "../SectionHeading";
 import { useTranslation } from "react-i18next";
+import Image from "next/image";
 
 const FAQData = [
   {
@@ -74,11 +75,16 @@ export default function FAQ() {
                 <span className="text-white text-[18px] leading-[27px] font-semibold font-poppins">
                   {t(faq.question)}
                 </span>
-                <IoIosArrowDown
+                {/* <IoIosArrowDown
                   className={`w-[30px] h-[30px] text-purple-400 transition-transform duration-300 ${
                     isOpen ? "rotate-180" : ""
                   }`}
-                />
+                /> */}
+                <button  className={`transition-transform duration-300 ${
+                    isOpen ? "" : "rotate-180"
+                  }`}>
+                  <Image src='/assets/icons/faq-arrow.svg' alt="faq-arrow" width={24} height={24} />
+                </button>
               </button>
 
               <div
