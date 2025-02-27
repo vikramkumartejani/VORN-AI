@@ -13,51 +13,46 @@ const Leaderboard = () => {
     { id: 7, user: "0xBe56...A7aA", amount: "26057582.46" },
     { id: 8, user: "0x8f19...b048", amount: "36474144.43" },
     { id: 9, user: "0xB627...6d32", amount: "26561519.92" },
-    { id: 10, user: "0x863E...8515", amount: "10000965.75" },
-    { id: 11, user: "0x6Fh2...b916", amount: "26057582.46" },
-    { id: 12, user: "0xB627...6d32", amount: "36474144.43" },
-    { id: 13, user: "0xBe56...A7aA", amount: "26057582.46" },
-    { id: 14, user: "0x6Fh2...b916", amount: "26561519.92" },
   ];
 
   return (
-    <div className="mt-[30px] border border-[#440675] bg-[#0B0015] rounded-[20px] p-[30px]">
-      <h1 className="text-[24px] leading-[28.8px] font-bold mb-[25px] text-white">
+    <div className="mt-[30px] border border-[#440675] bg-[#0B0015] rounded-[20px] lg:p-[30px] pb-[30px]">
+      <h1 className="pt-5 px-[20px] text-[24px] leading-[28.8px] font-bold lg:text-left text-center mb-[25px] text-white">
         {t("staking.leaderboard.title")}
       </h1>
 
-      {/* Thead as a separate box */}
-      <div className="w-full bg-[#1C0035] border border-[#7209C5] rounded-xl p-5 h-[70px] flex justify-between text-nowrap">
-        <h3 className="text-left text-white text-[20px] leading-[24px] font-medium w-1/4">
-          {t("staking.leaderboard.sr")}
-        </h3>
-        <h3 className="pl-14 text-white text-[20px] leading-[24px] font-medium w-1/2">
-          {t("staking.leaderboard.user")}
-        </h3>
-        <h3 className="text-right text-white text-[20px] leading-[24px] font-medium w-1/4">
-          {t("staking.leaderboard.amount")}
-        </h3>
+      {/* Header row as a separate box */}
+      <div className="px-2.5">
+        <div className="w-full bg-[#1C0035] border border-[#7209C5] rounded-xl px-3 md:p-5 h-[54px] md:h-[70px] flex items-center justify-between text-nowrap">
+          <div className="text-left text-white text-[16px] md:text-[20px] leading-[24px] font-medium">
+            {t("staking.leaderboard.sr")}
+          </div>
+          <div className="pl-10 text-white text-[16px] md:text-[20px] leading-[24px] font-medium text-center">
+            {t("staking.leaderboard.user")}
+          </div>
+          <div className="text-right text-white text-[16px] md:text-[20px] leading-[24px] font-medium">
+            {t("staking.leaderboard.amount")}
+          </div>
+        </div>
       </div>
 
-      {/* Table Wrapper */}
-      <div className="overflow-hidden mt-[25px]">
-        <table className="w-full border-collapse">
-          <tbody>
-            {leaderboardData.map((item) => (
-              <tr key={item.id}>
-                <td className="py-2.5 px-6 text-left text-[16px] leading-[19.2px] font-medium text-white w-1/4">
-                  {item.id}
-                </td>
-                <td className="px-4 pl-10 text-[16px] leading-[19.2px] font-medium text-white w-1/2">
-                  {item.user}
-                </td>
-                <td className="pr-10 text-right text-[16px] leading-[19.2px] font-medium text-white w-1/4">
-                  {item.amount}
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+      {/* Data rows wrapper */}
+      <div className="overflow-hidden mt-5 md:mt-[25px]">
+        <div className="w-full">
+          {leaderboardData.map((item) => (
+            <div key={item.id} className="flex justify-between w-full">
+              <div className="py-2.5 px-6 text-left text-[16px] leading-[19.2px] font-medium text-white ">
+                {item.id}
+              </div>
+              <div className="py-2.5 px-4 xl:pl-10 text-[16px] leading-[19.2px] font-medium text-center text-white">
+                {item.user}
+              </div>
+              <div className="py-2.5 pr-6 xl:pr-10 text-right text-[16px] leading-[19.2px] font-medium text-white">
+                {item.amount}
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

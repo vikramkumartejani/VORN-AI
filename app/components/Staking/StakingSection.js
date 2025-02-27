@@ -111,8 +111,7 @@ const StakingSection = () => {
       const hours = currentDate.getHours();
       const minutes = currentDate.getMinutes();
       setUnlockDate(
-        `${month} ${day} ${year}, ${hours}:${
-          minutes < 10 ? "0" + minutes : minutes
+        `${month} ${day} ${year}, ${hours}:${minutes < 10 ? "0" + minutes : minutes
         }`
       );
     } else {
@@ -134,7 +133,7 @@ const StakingSection = () => {
       </h2>
 
       <div
-        className="staking-section mt-6 flex lg:flex-col flex-row lg:items-start items-center justify-between rounded-[10px] lg:rounded-[12px] border border-[#440675] bg-[#1C0035] py-[22px] px-5"
+        className="staking-section mt-[15px] md:mt-6 flex lg:flex-col flex-row lg:items-start items-center justify-between rounded-[10px] lg:rounded-[12px] border border-[#440675] bg-[#1C0035] py-[22px] px-5"
         style={{}}
       >
         <h2 className="text-[#FFFFFF] text-[20px] leading-[24px] font-normal lg:mb-[5px]">
@@ -169,9 +168,8 @@ const StakingSection = () => {
                 </h2>
               </div>
               <h3
-                className={`text-[18px] sm:text-[20px] leading-[24px] font-medium ${
-                  isSelected ? "text-white" : option.textColor
-                }`}
+                className={`text-[18px] sm:text-[20px] leading-[24px] font-medium ${isSelected ? "text-white" : option.textColor
+                  }`}
               >
                 {t("staking.stakingSection.apr", { apr: option.apr })}
               </h3>
@@ -180,103 +178,108 @@ const StakingSection = () => {
         })}
       </div>
 
-      <div className="grid grid-cols-2 gap-[30px]">
-        <div className="w-full border border-[#7209C5] h-[66px] py-4 px-5 rounded-xl flex items-center justify-between gap-3">
-          <input
-            type="text"
-            placeholder={t("staking.stakingSection.placeholder")}
-            className="h-full bg-transparent outline-none w-full text-white text-[18px] leading-[27px] font-normal font-poppins placeholder:text-white"
-            value={stakeAmount ? `${stakeAmount} VRN` : ""}
-            onChange={handleInputChange}
-          />
-          <button
-            className="underline text-[#C176FF] text-[18px] leading-[27px] font-normal font-poppins"
-            onClick={handleMaxClick}
-          >
-            {t("staking.stakingSection.max")}
-          </button>
-        </div>
-        <button
-          className={`${styles.stakingButtonNow} ${
-            isHovered ? styles.hovered : ""
-          }`}
-          onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)}
-          // disabled={numericStakeAmount <= 0}
-        >
-          <div className={styles.gradientBorder} />
-          <div className={`${styles.buttonContentNow} `}>
-            {t("staking.stakingSection.stakeNow")}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-[15px] lg:gap-[30px]">
+        <div className="flex items-center flex-col gap-[15px] lg:gap-[30px]">
+          <div className="w-full border border-[#b195c7] h-[66px] py-4 px-5 rounded-xl flex items-center justify-between gap-3">
+            <input
+              type="text"
+              placeholder={t("staking.stakingSection.placeholder")}
+              className="h-full bg-transparent outline-none w-full text-white text-[18px] leading-[27px] font-normal font-poppins placeholder:text-white"
+              value={stakeAmount ? `${stakeAmount} VRN` : ""}
+              onChange={handleInputChange}
+            />
+            <button
+              className="underline text-[#C176FF] text-[18px] leading-[27px] font-normal font-poppins"
+              onClick={handleMaxClick}
+            >
+              {t("staking.stakingSection.max")}
+            </button>
           </div>
-          <div className={styles.glowEffect} />
-        </button>
-      </div>
 
-      <div className="mt-[30px] grid grid-cols-2 gap-[27px]">
-        <div
-          className="w-full border border-[#440675] bg-[#1C0035] rounded-xl px-5 py-[18px] text-white space-y-[12px]"
-          style={{ backdropFilter: "blur(30px)" }}
-        >
-          <div className="flex items-center justify-between gap-4">
-            <h2 className="text-[18px] leading-[21.6px] font-medium">
-              {t("staking.stakingSection.stakeAmount")}
-            </h2>
-            <h2 className="text-[18px] leading-[21.6px] font-normal">
-              {numericStakeAmount > 0
-                ? `${formatNumberWithCommas(numericStakeAmount.toFixed(2))} VRN`
-                : "0.00 VRN"}
-            </h2>
-          </div>
-          <div className="flex items-center justify-between gap-4">
-            <h2 className="text-white/70 text-[18px] leading-[21.6px] font-normal underline cursor-pointer">
-              {t("staking.stakingSection.estimatedProfit")}
-            </h2>
-            <h2 className="text-[#C176FF] text-[18px] leading-[21.6px] font-normal">
-              {estimatedProfit > 0
-                ? `${formatNumberWithCommas(estimatedProfit.toFixed(2))} VRN`
-                : "0.00 VRN"}
-            </h2>
-          </div>
-          <div className="flex items-center justify-between gap-4">
-            <h2 className="text-white/70 text-[18px] leading-[21.6px] font-normal underline cursor-pointer">
-              {t("staking.stakingSection.total")}
-            </h2>
-            <h2 className="text-[#C176FF] text-[18px] leading-[21.6px] font-normal">
-              {totalAmount > 0
-                ? `${formatNumberWithCommas(totalAmount.toFixed(2))} VRN`
-                : "0.00 VRN"}
-            </h2>
+          <div
+            className="w-full border border-[#440675] bg-[#1C0035] rounded-xl px-5 py-[18px] text-white space-y-[10px] sm:space-y-[12px]"
+            style={{ backdropFilter: "blur(30px)" }}
+          >
+            <div className="flex items-center justify-between gap-4">
+              <h2 className="text-[16px] sm:text-[18px] leading-[21.6px] font-medium">
+                {t("staking.stakingSection.stakeAmount")}
+              </h2>
+              <h2 className="text-[16px] sm:text-[18px] leading-[21.6px] font-normal">
+                {numericStakeAmount > 0
+                  ? `${formatNumberWithCommas(numericStakeAmount.toFixed(2))} VRN`
+                  : "0.00 VRN"}
+              </h2>
+            </div>
+
+            <div className="flex items-center justify-between gap-[10px] sm:gap-4">
+              <h2 className="text-white/70 text-[16px] sm:text-[18px] leading-[21.6px] font-normal underline cursor-pointer">
+                {t("staking.stakingSection.estimatedProfit")}
+              </h2>
+              <h2 className="text-[#C176FF] text-[16px] sm:text-[18px] leading-[21.6px] font-normal">
+                {estimatedProfit > 0
+                  ? `${formatNumberWithCommas(estimatedProfit.toFixed(2))} VRN`
+                  : "0.00 VRN"}
+              </h2>
+            </div>
+
+            <div className="flex items-center justify-between gap-[10px] sm:gap-4">
+              <h2 className="text-white/70 text-[16px] sm:text-[18px] leading-[21.6px] font-normal underline cursor-pointer">
+                {t("staking.stakingSection.total")}
+              </h2>
+              <h2 className="text-[#C176FF] text-[16px] sm:text-[18px] leading-[21.6px] font-normal">
+                {totalAmount > 0
+                  ? `${formatNumberWithCommas(totalAmount.toFixed(2))} VRN`
+                  : "0.00 VRN"}
+              </h2>
+            </div>
           </div>
         </div>
-        <div
-          className="w-full border border-[#440675] bg-[#1C0035] rounded-xl px-5 py-[18px] text-white space-y-[12px]"
-          style={{ backdropFilter: "blur(30px)" }}
-        >
-          <div className="flex items-center justify-between gap-4">
-            <h2 className="text-[18px] leading-[21.6px] font-medium">
-              {t("staking.stakingSection.lcaiToBeLocked")}
-            </h2>
-            <h2 className="text-[18px] leading-[21.6px] font-normal">
-              {numericStakeAmount > 0
-                ? formatNumberWithCommas(numericStakeAmount.toFixed(2))
-                : "0.00"}
-            </h2>
-          </div>
-          <div className="flex items-center justify-between gap-4">
-            <h2 className="text-white/70 text-[18px] leading-[21.6px] font-normal underline cursor-pointer">
-              {t("staking.stakingSection.duration")}
-            </h2>
-            <h2 className="text-[18px] leading-[21.6px] font-normal">
-              {stakingOptions[selectedPeriodIndex].period}
-            </h2>
-          </div>
-          <div className="flex items-center justify-between gap-4">
-            <h2 className="text-white/70 text-[18px] leading-[21.6px] font-normal underline cursor-pointer">
-              {t("staking.stakingSection.unlockOn")}
-            </h2>
-            <h2 className="text-[18px] leading-[21.6px] font-normal">
-              {unlockDate || "-"}
-            </h2>
+
+        <div className="flex items-center flex-col-reverse lg:flex-col gap-[15px] lg:gap-[27px]">
+          <button
+            className={`${styles.stakingButtonNow} ${isHovered ? styles.hovered : ""
+              }`}
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+          // disabled={numericStakeAmount <= 0}
+          >
+            <div className={styles.gradientBorder} />
+            <div className={`${styles.buttonContentNow} `}>
+              {t("staking.stakingSection.stakeNow")}
+            </div>
+            <div className={styles.glowEffect} />
+          </button>
+
+          <div
+            className="w-full border border-[#440675] bg-[#1C0035] rounded-xl px-5 py-[18px] text-white space-y-[10px] sm:space-y-[12px]"
+            style={{ backdropFilter: "blur(30px)" }}
+          >
+            <div className="flex items-center justify-between gap-4">
+              <h2 className="text-[16px] sm:text-[18px] leading-[21.6px] font-medium">
+                {t("staking.stakingSection.lcaiToBeLocked")}
+              </h2>
+              <h2 className="text-[16px] sm:text-[18px] leading-[21.6px] font-normal">
+                {numericStakeAmount > 0
+                  ? formatNumberWithCommas(numericStakeAmount.toFixed(2))
+                  : "0.00"}
+              </h2>
+            </div>
+            <div className="flex items-center justify-between gap-4">
+              <h2 className="text-white/70 text-[16px] sm:text-[18px] leading-[21.6px] font-normal underline cursor-pointer">
+                {t("staking.stakingSection.duration")}
+              </h2>
+              <h2 className="text-[16px] sm:text-[18px] leading-[21.6px] font-normal">
+                {stakingOptions[selectedPeriodIndex].period}
+              </h2>
+            </div>
+            <div className="flex items-center justify-between gap-4">
+              <h2 className="text-white/70 text-[16px] sm:text-[18px] leading-[21.6px] font-normal underline cursor-pointer">
+                {t("staking.stakingSection.unlockOn")}
+              </h2>
+              <h2 className="text-[16px] sm:text-[18px] leading-[21.6px] font-normal">
+                {unlockDate || "-"}
+              </h2>
+            </div>
           </div>
         </div>
       </div>
