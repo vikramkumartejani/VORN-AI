@@ -47,7 +47,7 @@ export default function EarnRewards() {
         }}
       />
       <SectionHeading text={t("home.earnRewards.title.start")} />
-      <h1 className="my-[25px] text-[40px] leading-[44px] font-bold text-white text-center text-center">
+      <h1 className="my-[25px] text-[40px] leading-[44px] font-bold text-white text-center">
         <span className="text-[#9442ED]">
           {t("home.earnRewards.title.start")}
         </span>{" "}
