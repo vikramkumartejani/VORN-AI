@@ -215,8 +215,8 @@
     }
   },
   "aiUtility": {
-    "title": "AI Utility",
-    "description": "Explore the various utilities of AI in our platform.",
+    "title": "Unified AI – The Brain of VORN.AI",
+    "description": "AI in VORN.AI acts as the intelligent automation layer, optimizing infrastructure, transactions, and  security across the decentralized network. It ensures seamless operation, fraud prevention, yield  management, and real-time decision-making.",
     "intelligentAutomation": {
       "title": "Intelligent Automation for Efficient, Secure & Decentralized Operations",
       "description": "VORN.AI enhances computing efficiency, automates smart contracts, predicts market trends, strengthens security against fraud, and optimizes governance to ensure seamless and trustless decentralized operations."

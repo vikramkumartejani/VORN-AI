@@ -106,7 +106,12 @@ html {
 
   background-image: 
     url("/assets/zy.svg"); 
-  
 }
 
+@media screen and (max-width: 1024px) {
+  .ai-utility-hero {
+    background-image: 
+      url("/assets/mobile-bg-ai.png"); 
+  }
+}
 

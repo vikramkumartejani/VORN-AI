@@ -22,20 +22,20 @@ const Timeline = () => {
 
   const TimelineCard = ({ title, description }) => (
     <div
-      className="max-w-[578px] rounded-[10px] p-[1px]"
+      className="w-full lg:max-w-[578px] rounded-[10px] p-[1px]"
       style={{
         background:
           "conic-gradient(from 180deg at 50% 50%, #959595 0deg, #2F2F2F 36.1deg, #2F2F2F 77.33deg, #2F2F2F 131.17deg, #2F2F2F 163.25deg, #959595 180.4deg, #2F2F2F 196.46deg, #2F2F2F 238.85deg, #2F2F2F 299.56deg, #959595 360deg)",
       }}
     >
       <div
-        className="rounded-[9px] py-[39px] pl-[33px] pr-[23px]"
+        className="rounded-[9px] py-6 md:py-[39px] px-[15px] md:pl-[33px] md:pr-[23px]"
         style={{
           background: "linear-gradient(180deg, #000000 0%, #371866 100%)",
           boxShadow: "0px 0px 50px 0px #8B5CF680 inset",
         }}
       >
-        <h2 className="text-white text-[32px] font-bold leading-[31px] mb-5">
+        <h2 className="text-white text-[28px] md:text-[32px] font-bold leading-[33.6px] md:leading-[31px] mb-5">
           {title}
         </h2>
         <p className="text-white/80 text-[18px] leading-[27px] font-normal font-poppins">
@@ -46,11 +46,11 @@ const Timeline = () => {
   );
 
   return (
-    <div className="bg-[#020103] pt-[54px] pb-[200px] relative">
+    <div className="bg-[#020103] pt-[100px] lg:pt-[54px] pb-[200px] relative px-5">
       {/* Center line */}
-      <div className="absolute left-1/2 top-[300px] bottom-[400px] w-[2px] bg-[#252525] -translate-x-1/2" />
+      <div className="lg:block hidden absolute left-1/2 top-[250px] xl:top-[300px] bottom-[380px] xl:bottom-[400px] w-[2px] bg-[#252525] -translate-x-1/2" />
 
-      <div className="max-w-[1240px] mx-auto px-4">
+      <div className="max-w-[1240px] mx-auto px-4 lg:block hidden">
         <div className="space-y-32">
           {/* First timeline item */}
           <div className="relative grid grid-cols-2 gap-16 items-center">
@@ -109,6 +109,62 @@ const Timeline = () => {
             </div>
           </div>
         </div>
+      </div>
+
+      <div className="lg:hidden block">
+        {/* First timeline item */}
+        <div className="flex flex-col gap-5 items-center">
+          <div className="flex justify-end">
+            <TimelineCard
+              title={t("aiUtility.timeline.first.title")}
+              description={t("aiUtility.timeline.first.description")}
+            />
+          </div>
+          <div className="flex justify-start">
+            <Image
+              src="/assets/ai-powere-compute-grid.png"
+              alt="AI-Powered Compute Grid"
+              width={715}
+              height={453}
+            />
+          </div>
+        </div>
+
+         {/* Second timeline item */}
+         <div className="mt-10 flex flex-col-reverse gap-5 items-center">
+            <div className="flex justify-end">
+              <Image
+                src="/assets/ai-yield-management-system.png"
+                alt="AI Yield Management System"
+                width={521}
+                height={539}
+              />
+            </div>
+            <div className="flex justify-start">
+              <TimelineCard
+                title={t("aiUtility.timeline.second.title")}
+                description={t("aiUtility.timeline.second.description")}
+              />
+            </div>
+          </div>
+
+          {/* Third timeline item */}
+          <div className="mt-10 flex flex-col gap-5 items-center">
+            <div className="flex justify-end">
+              <TimelineCard
+                title={t("aiUtility.timeline.third.title")}
+                description={t("aiUtility.timeline.third.description")}
+              />
+            </div>
+            <div className="flex justify-start">
+              <Image
+                src="/assets/ai-optimized-energy-marketplace-mobile.png"
+                alt="AI-Optimized Energy Marketplace"
+                width={705}
+                height={499}
+              />
+            </div>
+          </div>
       </div>
     </div>
   );
