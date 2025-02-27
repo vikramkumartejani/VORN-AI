@@ -17,7 +17,7 @@ const Staking = () => {
   return (
     <I18nextProvider i18n={i18n}>
       <Header />
-      <div className="pt-[130px] lg:pt-[202px] pb-[167px] px-[25px]">
+      <div className="pt-[130px] lg:pt-[202px] pb-[167px] px-4 sm:px-[25px]">
         <div
           className="w-full max-w-[1332px] mx-auto rounded-[20px] lg:py-9 p-[15px] lg:px-[30px] bg-[#10002080] border border-[#8616DF]"
           style={{ backdropFilter: "blur(14px)" }}

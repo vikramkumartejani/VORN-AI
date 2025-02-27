@@ -37,7 +37,7 @@ const Referral = () => {
 
       {/* Referral Link Section */}
       <div className="mt-5 border border-[#7209C5] rounded-xl p-[15px] lg:py-1.5 lg:px-5 flex items-start md:items-center md:flex-row flex-col gap-2.5 md:gap-5">
-        <h2 className="text-[16px] md:text-[18px] leading-[27px] font-normal font-poppins">
+        <h2 className="text-sm sm:text-[16px] md:text-[18px] leading-[27px] font-normal font-poppins">
           {t("staking.referral.yourReferralLink")}
           <Link href={referralLink} className="ml-1" target="_blank">
             {referralLink}
