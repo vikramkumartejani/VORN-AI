@@ -115,13 +115,13 @@ html {
 
 /* Custom SVG Styling */
 .svg-container {
-  width: 560px;
-  height: 2406px;
+  width: 530px;
+  height: 2256px;
 }
 @media (max-width: 1536px) {
   .svg-container {
-    width: 580px;
-    height: 2456px;
+    width: 530px;
+    height: 2356px;
   }
 }
 @media (max-width: 1430px) {

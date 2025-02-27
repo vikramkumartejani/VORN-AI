@@ -62,7 +62,7 @@ const PoweringVORNAI = () => {
       </h1>
 
       {/* Mobile Design */}
-      <div className="lg:mt-[100px] mt-[50px] relative lg:space-y-[200px] space-y-[50px]">
+      <div className="lg:mt-[100px] mt-[50px] relative lg:space-y-[200px] space-y-[50px] max-w-[1300px] mx-auto">
         <Line />
 
         {sections.map((section, index) => (
