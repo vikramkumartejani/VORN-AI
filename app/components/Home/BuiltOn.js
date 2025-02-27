@@ -6,14 +6,12 @@ import { useTranslation } from "react-i18next";
 const BuiltOn = () => {
   const { t } = useTranslation();
 
-  // Images for the sliders - using your actual paths
   const logos = [
     "/assets/built-on/built-1.svg",
     "/assets/built-on/built-2.svg",
     "/assets/built-on/built-3.svg",
   ];
 
-  // Create duplicated sets for seamless looping (triple the content)
   const logoSet = [...logos, ...logos, ...logos, ...logos];
 
   return (
@@ -26,7 +24,7 @@ const BuiltOn = () => {
       <div className="max-w-[1248px] mx-auto w-full">
         <SectionHeading text={t("home.builtOn.title")} />
         <h1
-          className="mt-[30px] mb-[45px] text-center text-[40px] leading-[44px] font-bold"
+          className="mt-[30px]  px-4 mb-[45px] text-center text-[32px] sm:text-[40px] leading-[44px] font-bold"
           style={{
             background: `linear-gradient(0deg, #FFFFFF, #FFFFFF), linear-gradient(180deg, rgba(0, 0, 0, 0) 59.75%, rgba(0, 0, 0, 0.5) 100%)`,
             backgroundBlendMode: "multiply",

@@ -46,15 +46,15 @@ const Home = () => {
         </div>
       </div>
       <FeaturedIn />
-      {/* <OurFeature /> */}
-      {/* <BuyNRTX /> */}
+      <OurFeature />
+      <BuyNRTX />
       {/* <EarnRewards /> */}
       {/* <RewardsCalculator /> */}
       {/* <RoadMap /> */}
       {/* <Tokenomics /> */}
-      {/* <BuiltOn /> */}
+      <BuiltOn />
       {/* <FAQ /> */}
-      {/* <Footer /> */}
+      <Footer />
     </I18nextProvider>
   );
 };

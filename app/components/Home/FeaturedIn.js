@@ -5,11 +5,11 @@ import { useTranslation } from "react-i18next";
 const FeaturedIn = () => {
   const { t } = useTranslation();
   const logos = [
-    { 
-      src: "/assets/coin-gape.svg", 
-      alt: "coin-gape", 
-      width: 159, 
-      height: 44 
+    {
+      src: "/assets/coin-gape.svg",
+      alt: "coin-gape",
+      width: 159,
+      height: 44
     },
     {
       src: "/assets/analytics-insight.svg",
@@ -38,15 +38,15 @@ const FeaturedIn = () => {
   ];
 
   return (
-    <div className="bg-black w-full">
+    <div className="bg-black w-full pl-[26px]">
       <div className="max-w-[1267px] mx-auto w-full py-[46px] sm:py-[57px] flex items-center gap-[26px]">
-        <h2 className="text-white text-[32px] font-bold leading-[26px] text-nowrap">
+        <h2 className="text-white text-[24px] sm:text-[32px] font-bold leading-[26px] text-nowrap">
           {t("home.featuredIn.title")}
         </h2>
         <div className="flex-1 overflow-hidden relative">
           {/* Left gradient overlay */}
           <div
-            className="w-[161px] absolute left-0 top-0 bottom-0 z-10"
+            className="w-[100px] sm:w-[161px] absolute left-0 top-0 bottom-0 z-10"
             style={{
               background:
                 "linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, #000000 100%)",
@@ -75,7 +75,7 @@ const FeaturedIn = () => {
 
           {/* Right gradient overlay */}
           <div
-            className="w-[161px] absolute right-0 top-0 bottom-0 z-10"
+            className="w-[100px] sm:w-[161px] absolute right-0 top-0 bottom-0 z-10"
             style={{
               background:
                 "linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, #000000 100%)",

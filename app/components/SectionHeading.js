@@ -8,10 +8,10 @@ const SectionHeading = ({
   iconSrc = "/assets/icons/heading-icon.svg",
 }) => {
   return (
-    <div className="w-fit px-[10px] mx-auto justify-center w-full flex items-center gap-4">
-      <Image src={leftArrowSrc} alt="arrow" width={110} height={1} />
+    <div className="w-fit px-[10px] mx-auto justify-center flex items-center gap-4 overflow-hidden">
+      <Image src={leftArrowSrc} alt="arrow" width={110} height={1} className="sm:w-[110px] w-[100px]" />
       <div
-        className="py-1 pl-1.5 pr-2.5 bg-[#8B5CF666] rounded-[99px] flex items-center gap-2 justify-center border border-[#8B5CF64D]"
+        className="py-1 px-4 sm:pl-1.5 sm:pr-2.5 bg-[#8B5CF666] rounded-[99px] flex items-center gap-2 justify-center border border-[#8B5CF64D]"
         style={{ backdropFilter: "blur(5px)" }}
       >
         <Image src={iconSrc} alt="heading-icon" width={20} height={20} />
@@ -19,13 +19,7 @@ const SectionHeading = ({
           {text}
         </h2>
       </div>
-      <Image
-        src={rightArrowSrc}
-        alt="arrow"
-        width={110}
-        height={1}
-        className="rotate-180"
-      />
+      <Image src={rightArrowSrc} alt="arrow" width={110} height={1} className="sm:w-[110px] w-[100px] rotate-180"/>
     </div>
   );
 };

@@ -111,7 +111,7 @@ const BuyNowBox = () => {
       </div>
 
       {/* Stackable & Purchased VRN */}
-      <div className="mt-5 w-full bg-[#7314C040]">
+      <div className="mt-5 w-full bg-[#7314C040] px-4">
         <div className="max-w-[300px] sm:max-w-[395px] mx-auto w-full flex items-center justify-between sm:gap-[85px] py-2.5">
           <div>
             <h2 className="text-[13px] sm:text-[14px] leading-[16.8px] font-medium mb-[5px]">

@@ -9,7 +9,7 @@ const Footer = () => {
 
   return (
     <div
-      className="border-t border-solid"
+      className="border-t border-solid px-[25px]"
       style={{
         borderTopWidth: "1px",
         borderImageSource:
@@ -17,12 +17,12 @@ const Footer = () => {
         borderImageSlice: 1,
       }}
     >
-      <div className="max-w-[1162px] mx-auto w-full py-[120px] pb-20">
+      <div className="max-w-[1162px] mx-auto w-full pt-[25px] sm:py-[60px] lg:py-[120px] pb-[33px] sm:pb-20">
         {/* Links */}
-        <div className="pb-[50px] flex items-start justify-between gap-5">
+        <div className="pb-[50px] flex items-start justify-between lg:flex-row flex-col gap-[50px] lg:gap-5">
           <div>
             <Image src="/assets/logo.svg" alt="logo" width={131} height={43} />
-            <p className="max-w-[373px] pt-5 pb-10 text-[14px] text-white leading-[21px] font-normal font-poppins">
+            <p className="max-w-[373px] pt-5 pb-8 md:pb-10 text-[14px] text-white leading-[21px] font-normal font-poppins">
               {t("footer.description")}
             </p>
             <div className="flex items-center gap-[27px]">
@@ -61,7 +61,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="max-w-[528px] w-full flex items-start justify-between gap-5">
+          <div className="lg:max-w-[528px] w-full grid grid-cols-2 sm:flex items-start justify-between gap-10 sm:gap-5">
             {/* Product Section */}
             <div className="w-full flex items-start justify-center flex-col">
               <h2 className="mb-6 text-white text-[16px] leading-[24px] font-bold font-poppins">
@@ -69,22 +69,22 @@ const Footer = () => {
               </h2>
               <ul className="space-y-[14px]">
                 <li>
-                  <Link href="/features" className="text-white">
+                  <Link href="/features" className="text-white text-[14px] leading-[21px] font-normal font-poppins">
                     {t("footer.product.features")}
                   </Link>
                 </li>
                 <li>
-                  <Link href="/features" className="text-white">
+                  <Link href="/ai-utility" className="text-white text-[14px] leading-[21px] font-normal font-poppins">
                     {t("footer.product.unifiedAI")}
                   </Link>
                 </li>
                 <li>
-                  <Link href="/features" className="text-white">
+                  <Link href="/de-pin" className="text-white text-[14px] leading-[21px] font-normal font-poppins">
                     {t("footer.product.depin")}
                   </Link>
                 </li>
                 <li>
-                  <Link href="/features" className="text-white">
+                  <Link href="/rwa" className="text-white text-[14px] leading-[21px] font-normal font-poppins">
                     {t("footer.product.rwa")}
                   </Link>
                 </li>
@@ -98,22 +98,22 @@ const Footer = () => {
               </h2>
               <ul className="space-y-[14px]">
                 <li>
-                  <Link href="/" className="text-white">
+                  <Link href="/" className="text-white text-[14px] leading-[21px] font-normal font-poppins">
                     {t("footer.company.home")}
                   </Link>
                 </li>
                 <li>
-                  <Link href="/roadmap" className="text-white">
+                  <Link href="/roadmap" className="text-white text-[14px] leading-[21px] font-normal font-poppins">
                     {t("footer.company.roadmap")}
                   </Link>
                 </li>
                 <li>
-                  <Link href="/tokenomics" className="text-white">
+                  <Link href="/tokenomics" className="text-white text-[14px] leading-[21px] font-normal font-poppins">
                     {t("footer.company.tokenomics")}
                   </Link>
                 </li>
                 <li>
-                  <Link href="/faq" className="text-white">
+                  <Link href="/faq" className="text-white text-[14px] leading-[21px] font-normal font-poppins">
                     {t("footer.company.faqs")}
                   </Link>
                 </li>
@@ -127,17 +127,17 @@ const Footer = () => {
               </h2>
               <ul className="space-y-[14px]">
                 <li>
-                  <Link href="/staking" className="text-white">
+                  <Link href="/staking" className="text-white text-[14px] leading-[21px] font-normal font-poppins">
                     {t("footer.resources.staking")}
                   </Link>
                 </li>
                 <li>
-                  <Link href="/whitepaper" className="text-white">
+                  <Link href="/whitepaper" className="text-white text-[14px] leading-[21px] font-normal font-poppins">
                     {t("footer.resources.whitepaper")}
                   </Link>
                 </li>
                 <li>
-                  <Link href="/cookie-policy" className="text-white">
+                  <Link href="/cookie-policy" className="text-white text-[14px] leading-[21px] font-normal font-poppins">
                     {t("footer.resources.cookiePolicy")}
                   </Link>
                 </li>
@@ -147,8 +147,8 @@ const Footer = () => {
         </div>
 
         {/* Newsletter */}
-        <div className="py-[50px] border-t border-[#8B5CF6]/20">
-          <div className="flex items-center gap-4 justify-between">
+        <div className="py-10 sm:py-[50px] border-t border-[#8B5CF6]/20">
+          <div className="flex items-center gap-6 sm:gap-4 justify-between flex-wrap">
             <div>
               <h2 className="text-white text-[16px] font-bold font-poppins mb-1">
                 {t("footer.newsletter.title")}
@@ -157,11 +157,11 @@ const Footer = () => {
                 {t("footer.newsletter.subtitle")}
               </h3>
             </div>
-            <div className="flex items-center gap-3">
+            <div className="sm:w-fit w-full flex items-center gap-3">
               <input
                 type="text"
                 placeholder={t("footer.newsletter.placeholder")}
-                className="text-white placeholder:text-white border border-[#8B5CF666] w-[400px] h-[45px] rounded-[12px] px-4 bg-transparent outline-none"
+                className="text-white placeholder:text-white border border-[#8B5CF666] w-full sm:w-[400px] h-[45px] rounded-[12px] px-4 bg-transparent outline-none"
               />
               <LocalizedButtonLink
                 href="/subscribe"
@@ -172,17 +172,17 @@ const Footer = () => {
         </div>
 
         {/* Rights */}
-        <div className="flex items-center justify-between gap-4 border-t border-[#8B5CF6]/20 pt-[50px]">
+        <div className="flex items-start sm:items-center justify-between md:flex-row flex-col-reverse gap-4 border-t border-[#8B5CF6]/20 pt-10 sm:pt-[50px]">
           <div className="flex items-center gap-[18px]">
-            <Link href="/privacy-policy" className="text-white">
+            <Link href="/privacy-policy" className="text-white font-poppins font-normal text-[14px]">
               {t("footer.privacyPolicy")}
             </Link>
             <div className="bg-[#D9D9D9] w-1 h-1 rounded-full"></div>
-            <Link href="/terms" className="text-white">
+            <Link href="/terms" className="text-white font-poppins font-normal text-[14px]">
               {t("footer.termsConditions")}
             </Link>
           </div>
-          <h3 className="text-white text-[14px]">{t("footer.rights")}</h3>
+          <h3 className="text-white text-[14px] font-normal font-poppins">{t("footer.rights")}</h3>
         </div>
       </div>
     </div>

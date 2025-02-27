@@ -128,15 +128,16 @@ const StakingSection = () => {
   };
 
   return (
-    <div className="mt-[25px] rounded-[20px] bg-[#0B0015] border border-[#440675] p-[30px]">
-      <h2 className="text-white text-[24px] leading-[28.8px] font-bold">
+    <div className="mt-[25px] rounded-[20px] bg-[#0B0015] border border-[#440675] px-2.5 pb-5 pt-2.5 lg:p-[30px]">
+      <h2 className="text-white text-[24px] leading-[28.8px] font-bold lg:text-left text-center">
         {t("staking.stakingSection.title")}
       </h2>
+
       <div
-        className="staking-section mt-6 rounded-[12px] border border-[#440675] bg-[#1C0035] py-[22px] px-5"
+        className="staking-section mt-6 flex lg:flex-col flex-row lg:items-start items-center justify-between rounded-[10px] lg:rounded-[12px] border border-[#440675] bg-[#1C0035] py-[22px] px-5"
         style={{}}
       >
-        <h2 className="text-[#FFFFFF] text-[20px] leading-[24px] font-normal mb-[5px]">
+        <h2 className="text-[#FFFFFF] text-[20px] leading-[24px] font-normal lg:mb-[5px]">
           {t("staking.stakingSection.totalStaking")}
         </h2>
         <h3 className="text-white text-[32px] leading-[38.4px] font-normal">
@@ -144,15 +145,13 @@ const StakingSection = () => {
         </h3>
       </div>
 
-      <div className="my-[30px] grid grid-cols-4 gap-[27px]">
+      <div className="my-[15px] lg:my-[30px] grid grid-cols-2 lg:grid-cols-4 gap-2.5 md:gap-5 lg:gap-[27px]">
         {stakingOptions.map((option, index) => {
-          // Determine if this period is selected
           const isSelected = index === selectedPeriodIndex;
-
           return (
             <div
               key={index}
-              className="border border-[#9442ED] rounded-xl w-[284px] px-[15px] py-5 cursor-pointer"
+              className="border border-[#9442ED] rounded-xl w-full px-[15px] py-5 cursor-pointer"
               style={{
                 backdropFilter: "blur(30px)",
                 background: isSelected
@@ -161,16 +160,16 @@ const StakingSection = () => {
               }}
               onClick={() => handlePeriodSelect(index)}
             >
-              <div className="flex items-center justify-between gap-2 mb-[22px]">
-                <h2 className="text-white text-[20px] leading-[24px] font-normal">
+              <div className="flex md:items-center justify-between md:flex-row items-start flex-col gap-1.5 lg:gap-2 mb-1.5 xl:mb-[22px]">
+                <h2 className="text-white text-[18px] sm:text-[20px] leading-[24px] font-normal">
                   {t("staking.stakingSection.stakingPeriod")}
                 </h2>
-                <h2 className="text-white text-[20px] leading-[24px] font-normal">
+                <h2 className="text-white text-[18px] sm:text-[20px] leading-[24px] font-normal">
                   {option.period}
                 </h2>
               </div>
               <h3
-                className={`text-[20px] leading-[24px] font-medium ${
+                className={`text-[18px] sm:text-[20px] leading-[24px] font-medium ${
                   isSelected ? "text-white" : option.textColor
                 }`}
               >

@@ -36,13 +36,13 @@ const BuyNRTX = () => {
   return (
     <div className="">
       <div
-        className="py-20"
+        className="pt-[12px] pb-20 lg:py-20 px-4"
         style={{
           background: `radial-gradient(32.52% 50% at 50% 50%, rgba(132, 45, 255, 0.25) 0%, rgba(2, 1, 3, 0.25) 100%), linear-gradient(0deg, #000000, #000000)`,
         }}
       >
         <SectionHeading text={t("home.buyNRTX.title")} />
-        <h1 className="my-[25px] text-[40px] leading-[44px] font-bold text-white text-center">
+        <h1 className="my-[25px] text-[32px] sm:text-[40px] leading-[44px] font-bold text-white text-center">
           {t("home.buyNRTX.title")}
         </h1>
         <p className="text-center text-[18px] leading-[27px] font-normal font-poppins text-white/80">
@@ -50,11 +50,11 @@ const BuyNRTX = () => {
         </p>
 
         {/* Steps Container */}
-        <div className="mt-11 max-w-[1236px] w-full mx-auto flex gap-5">
+        <div className="mt-11 max-w-[1236px] w-full mx-auto grid grid-cols-1 md:grid-cols-2 lg:flex gap-5">
           {steps.map((item, index) => (
             <div
               key={index}
-              className={`${item.marginTop} relative max-w-[399px] h-[414px] rounded-[20px] p-[1px] transition-shadow duration-300 hover:shadow-[0px_0px_25px_0px_#8B5CF6]`}
+              className={`lg:${item.marginTop} relative lg:w-[399px] lg:h-[450px] xl:h-[414px] rounded-[20px] p-[1px] transition-shadow duration-300 hover:shadow-[0px_0px_25px_0px_#8B5CF6]`}
               style={{
                 background:
                   "conic-gradient(from 180deg at 50% 50%, #959595 0deg, #2F2F2F 36.1deg, #2F2F2F 77.33deg, #2F2F2F 131.17deg, #2F2F2F 163.25deg, #959595 180.4deg, #2F2F2F 196.46deg, #2F2F2F 238.85deg, #2F2F2F 299.56deg, #959595 360deg)",
@@ -79,6 +79,7 @@ const BuyNRTX = () => {
                   alt={item.alt}
                   width={104}
                   height={104}
+                  className="sm:w-[104px] sm:h-[104px] w-[90px] h-[90px]"
                 />
                 <p className="mt-[26px] text-white font-normal font-poppins text-[16px] leading-[24px]">
                   {t(item.description)}
