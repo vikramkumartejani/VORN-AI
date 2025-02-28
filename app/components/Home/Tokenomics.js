@@ -43,13 +43,13 @@ export default function Tokenomics() {
   ];
 
   return (
-    <div className="xl:h-[950px] bg-black px-4 md:px-5 pt-20 pb-0 relative overflow-hidden">
+    <div className="xl:h-[950px] lg:h-[900px] bg-black px-4 md:px-5 pt-20 pb-0 relative overflow-hidden">
       <img
         src="/assets/tokenomics-bg.svg"
         alt="bg-graphic"
         className="absolute bottom-0 left-0 w-full z-[1]"
       />
-      <div className="relative z-[2]">
+      <div className="relative z-[2] lg:max-w-full max-w-[811px] mx-auto">
         <SectionHeading text={t("home.tokenomics.subTitle")} />
         <h1 className="px-4 my-[25px] text-[32px] md:text-[40px] leading-[44px] font-bold text-white text-center">
           <span className="text-[#9442ED]">
@@ -62,7 +62,7 @@ export default function Tokenomics() {
         </p>
 
         {/* Cards Section */}
-        <div className="max-w-[1133px] mx-auto xl:mt-[60px] pb-20 xl:pb-[40px] items-start flex flex-col-reverse xl:grid xl:grid-cols-2 gap-5 sm:gap-8 xl:items-center">
+        <div className="max-w-[1133px] mx-auto lg:mt-[60px] pb-20 lg:pb-[40px] items-start flex flex-col-reverse lg:grid lg:grid-cols-2 gap-5 sm:gap-8 lg:items-center">
           {/* Legend */}
           <div className="space-y-4">
             {tokenomicsData.map(({ name, displayValue, color }) => (
@@ -77,7 +77,9 @@ export default function Tokenomics() {
               </div>
             ))}
           </div>
-          <Chart3D data={tokenomicsData} />
+          <div className="lg:h-auto h-[330px] overflow-visible mx-auto">
+            <Chart3D data={tokenomicsData} />
+          </div>
         </div>
       </div>
     </div>

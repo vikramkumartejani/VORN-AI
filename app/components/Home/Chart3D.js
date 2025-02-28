@@ -1,6 +1,6 @@
 "use client";
 
-import { useLayoutEffect, useRef } from "react";
+import { useLayoutEffect, useRef, useEffect } from "react";
 import * as am4core from "@amcharts/amcharts4/core";
 import * as am4charts from "@amcharts/amcharts4/charts";
 import am4themes_animated from "@amcharts/amcharts4/themes/animated";
@@ -10,11 +10,21 @@ am4core.useTheme(am4themes_animated);
 
 const Chart3D = ({ data }) => {
   const chartDiv = useRef(null);
+  const chartRef = useRef(null); // To store the chart instance
 
   useLayoutEffect(() => {
     // Create chart instance
     const chart = am4core.create("chartdiv", am4charts.PieChart3D);
     chart.hiddenState.properties.opacity = 0; // initial fade-in
+
+    // Store chart instance in ref
+    chartRef.current = chart;
+
+    // Explicitly disable and hide the logo/watermark
+    chart.logo.disabled = true;
+    chart.logo.opacity = 0; // Ensure it’s invisible
+    chart.logo.height = 0; // Collapse its size
+    chart.logo.width = 0;
 
     // Add custom tokenomics data with separate height and adjusted values
     chart.data = data;
@@ -50,7 +60,7 @@ const Chart3D = ({ data }) => {
     series.labels.template.text = "{displayValue}%";
     series.labels.template.radius = am4core.percent(-40); // Move labels closer to the center
     series.labels.template.fill = am4core.color("#FFFFFF");
-    series.labels.template.fontSize = 18;
+    series.labels.template.fontSize = 18; // Default font size
     series.labels.template.fontWeight = "bold";
     series.alignLabels = false;
 
@@ -76,10 +86,36 @@ const Chart3D = ({ data }) => {
     };
   }, []);
 
+  // Effect to monitor screen width and adjust font size
+  useEffect(() => {
+    const updateFontSize = () => {
+      const chart = chartRef.current;
+      if (chart && chart.series.length > 0) {
+        const series = chart.series.getIndex(0); // Get the first series
+        if (window.innerWidth < 640) {
+          series.labels.template.fontSize = 15; // Set font size to 12px below 640px
+        } else {
+          series.labels.template.fontSize = 18; // Revert to default 18px
+        }
+      }
+    };
+
+    // Initial call to set font size based on current width
+    updateFontSize();
+
+    // Add resize event listener
+    window.addEventListener("resize", updateFontSize);
+
+    // Cleanup listener on unmount
+    return () => {
+      window.removeEventListener("resize", updateFontSize);
+    };
+  }, []); // Empty dependency array to run only once on mount
+
   return (
     <div
       id="chartdiv"
-      className="sm:w-[650px] h-[400px] xl:h-[650px] sm:mx-auto my-auto mt-[30px]"
+      className="sm:w-[550px] w-[295px] h-[400px] lg:h-[550px] xl:h-[650px] mx-auto my-auto mt-[30px] xl:pe-0 lg:pe-5"
       ref={chartDiv}
     ></div>
   );
