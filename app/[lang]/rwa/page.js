@@ -28,7 +28,7 @@ const RWA = () => {
                         muted
                         playsInline
                     >
-                        <source src="/assets/de-pin-bg-video.mp4" type="video/mp4" />
+                        <source src="/assets/rwa-hero-bg.mp4" type="video/mp4" />
                     </video>
                 </div>
 

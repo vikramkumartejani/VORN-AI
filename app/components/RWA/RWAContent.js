@@ -7,28 +7,28 @@ const featuresData = [
         id: 1,
         title: "RWA Tokenization Platform",
         description: "This platform facilitates the conversion of real-world infrastructure into NFT-backed tokens, allowing asset owners to tokenize and fractionalize their assets for global investment and income generation.",
-        imageSrc: "/assets/white-image.png",
+        imageSrc: "/assets/rwa-tokenization-platform.png",
         reversed: false,
     },
     {
         id: 2,
         title: " RWA Marketplace",
         description: "The RWA marketplace is a decentralized exchange for buying, selling, and trading tokenized assets like real estate and energy credits, with AI ensuring accurate valuations, fraud prevention, and instant liquidity.",
-        imageSrc: "/assets/white-image.png",
+        imageSrc: "/assets/rwa-marketplace.png",
         reversed: true,
     },
     {
         id: 3,
         title: " RWA Staking Pools",
         description: "RWA staking pools allow users to stake tokenized assets and earn yields generated from the underlying real-world assets, with AI managing yield distribution based on performance and market conditions.",
-        imageSrc: "/assets/white-image.png",
+        imageSrc: "/assets/rwa-staking-pools.png",
         reversed: false,
     },
     {
         id: 4,
         title: "RWA Collateralization & Lending",
         description: "RWA collateralization and lending services provide liquidity by enabling users to lock their tokenized assets as collateral for loans, with AI assessing risk, managing interest rates, and ensuring secure transactions.",
-        imageSrc: "/assets/white-image.png",
+        imageSrc: "/assets/rwa-collateralization-lending.png",
         reversed: true,
     },
 ];
@@ -38,7 +38,7 @@ const RWAContent = () => {
     return (
         <div className='px-5'>
             <div className='py-[50px] md:py-[80px] lg:py-[113px] max-w-[986px] mx-auto w-full flex items-center justify-between lg:flex-row flex-col gap-10 lg:gap-4'>
-                <Image src='/assets/white-image.png' alt='white-image' width={425} height={410} className='rounded-[10px]' />
+                <Image src='/assets/unlocking-real-world.png' alt='white-image' width={425} height={410} className='rounded-[10px] mix-blend-screen bg-transparent' />
                 <div className='lg:max-w-[488px] lg:text-left text-center'>
                     <h2 className='text-white text-[32px] leading-[48px] font-bold mb-5'>Unlocking Real-World Assets for Everyone.</h2>
                     <p className='text-white/80 text-[18px] leading-[27px] font-normal font-poppins'>RWA Core revolutionizes asset ownership by tokenizing infrastructure into blockchain assets, enabling fractional ownership for small-scale investors. With automated yield distribution providing passive income and a P2P marketplace for seamless global trading, RWA Core makes high-value assets accessible to all.</p>
@@ -47,12 +47,12 @@ const RWAContent = () => {
 
             <h1 className='pt-[80px] lg:pt-0 max-w-[650px] mx-auto w-full text-center text-white text-[32px] md:text-[40px] leading-[48px] md:leading-[60px] font-bold'><span className='text-[#9442ED]'>Bridging Real-World Assets</span> with Blockchain-Powered Utility.</h1>
 
-            <div className='mt-[100px] max-w-[1236px] w-full mx-auto pb-[300px] h-full'>
+            <div className='pt-8 md:mt-[100px] max-w-[1236px] w-full mx-auto pb-[300px] h-full'>
                 {featuresData.map((feature, index) => (
                     <div
                         key={feature.id}
                         className={`${index === 1 ? "my-6 lg:flex-row flex-col-reverse gap-6" : "mt-5  last:lg:flex-row last:flex-col-reverse"
-                            } flex items-center lg:items-start lg:flex-row flex-col w-full gap-6 lg:h-[450px] `}
+                            } flex items-center lg:items-start lg:flex-row flex-col w-full gap-6 lg:h-[400px]`}
                     >
                         {feature.reversed ? (
                             <>
