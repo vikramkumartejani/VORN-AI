@@ -49,9 +49,9 @@ const Home = () => {
       <OurFeature />
       <BuyNRTX />
       <EarnRewards />
-      {/* <RewardsCalculator /> */}
-      {/* <RoadMap /> */}
-      {/* <Tokenomics /> */}
+      <RewardsCalculator />
+      <RoadMap />
+      <Tokenomics />
       <BuiltOn />
       <FAQ />
       <Footer />

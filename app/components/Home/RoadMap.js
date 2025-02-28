@@ -55,14 +55,19 @@ export default function RoadMap() {
   ];
 
   return (
-    <div className="min-h-screen bg-black px-4 md:px-5 py-24 relative overflow-hidden">
+    <div className=" bg-black px-4 md:px-5 py-24 relative overflow-hidden">
       <img
         src="/assets/roadmap-bg.svg"
         alt="bg-graphic"
-        className="absolute bottom-0 left-0 w-full"
+        className="absolute bottom-0 left-0 w-full object-cover  md:block hidden"
+      />
+      <img
+        src="/assets/roadmap-bg-mobile.png"
+        alt="bg-graphic"
+        className="absolute bottom-0 left-0 w-full object-cover block md:hidden"
       />
       <SectionHeading text={t("home.roadMap.subTitle")} />
-      <h1 className="my-[25px] text-[40px] leading-[44px] font-bold text-white text-center">
+      <h1 className="my-[25px] text-[32px] md:text-[40px] leading-[44px] font-bold text-white text-center">
         {t("home.roadMap.title")}
       </h1>
       <p className="text-center text-[18px] leading-[27px] font-normal font-poppins text-white/80 max-w-[653px] mx-auto">
@@ -70,11 +75,11 @@ export default function RoadMap() {
       </p>
 
       {/* Cards Section */}
-      <div className="max-w-[1236px] mx-auto grid lg:grid-cols-4 sm:grid-cols-2 md:gap-[28px] gap-[16px] mt-[75px] pb-[40px]">
+      <div className="max-w-[1236px] mx-auto grid lg:grid-cols-4 justify-items-center sm:grid-cols-2 md:gap-[28px] gap-[16px] mt-[75px] pb-[40px]">
         {phaseData.map((phase, index) => (
           <div
             key={index}
-            className="rounded-[20px] bg-[#12092503] border border-[#FFFFFF80] overflow-hidden min-h-[126px] transition-shadow duration-300 hover:shadow-[0px_0px_25px_0px_#8B5CF6]"
+            className="rounded-[20px] bg-[#12092503] w-[300px] border border-[#FFFFFF80] overflow-hidden min-h-[126px] transition-shadow duration-300 hover:shadow-[0px_0px_25px_0px_#8B5CF6]"
           >
             <div
               className="text-white rounded-[20px] px-[20px] pt-[11px] pb-[19px] min-h-[126px] flex flex-col w-full h-full flex-1"

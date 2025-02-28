@@ -24,25 +24,25 @@ export default function RewardsCalculator() {
   ];
 
   return (
-    <div className="min-h-screen bg-black px-4 md:px-5 py-24 relative overflow-hidden">
+    <div className="  bg-black px-4 md:px-5 py-24 relative overflow-hidden">
       <img
         src="/assets/graphic.svg"
-        alt="graphic"
+        alt="graphic" 
         className="absolute bottom-0 left-0 w-full"
       />
       <SectionHeading text={t("home.rewardsCalculator.title.end")} />
-      <h1 className="my-[25px] text-[40px] leading-[44px] font-bold text-white text-center">
+      <h1 className="px-3 my-[25px] text-[32px] md:text-[40px] leading-[44px] font-bold text-white text-center">
         {t("home.rewardsCalculator.title.start")}{" "}
         <span className="text-[#9442ED]">
           {t("home.rewardsCalculator.title.end")}
         </span>
       </h1>
-      <p className="text-center text-[18px] leading-[27px] font-normal font-poppins text-white/80 max-w-[653px] mx-auto">
+      <p className="px-2 text-center text-[18px] leading-[27px] font-normal font-poppins text-white/80 max-w-[653px] mx-auto">
         {t("home.rewardsCalculator.description")}
       </p>
 
       {/* Cards Section */}
-      <div className="max-w-[1236px] mx-auto grid md:grid-cols-4 grid-cols-2 md:gap-[47px] gap-[20px] mt-[75px]">
+      <div className="max-w-[1236px] mx-auto grid md:grid-cols-4 grid-cols-2 lg:gap-[47px] gap-[20px] mt-[75px]">
         {cardData.map((card, index) => (
           <div
             key={index}
@@ -63,7 +63,7 @@ export default function RewardsCalculator() {
           </div>
         ))}
       </div>
-      <div className="mx-auto flex w-full justify-center items-center mt-[60px] pb-[154px]">
+      <div className="mx-auto flex w-full justify-center items-center mt-[60px] lg:pb-[154px]">
         <Button
           href="/"
           translationKey="home.rewardsCalculator.buttonText"

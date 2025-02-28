@@ -43,7 +43,7 @@ export default function Tokenomics() {
   ];
 
   return (
-    <div className="xl:h-[950px] lg:h-[950px] md:h-[1200px] sm:h-[1200px] h-[1300px] bg-black px-4 md:px-5 pt-20 pb-0 relative overflow-hidden">
+    <div className="xl:h-[950px] bg-black px-4 md:px-5 pt-20 pb-0 relative overflow-hidden">
       <img
         src="/assets/tokenomics-bg.svg"
         alt="bg-graphic"
@@ -51,18 +51,18 @@ export default function Tokenomics() {
       />
       <div className="relative z-[2]">
         <SectionHeading text={t("home.tokenomics.subTitle")} />
-        <h1 className="my-[25px] text-[40px] leading-[44px] font-bold text-white text-center">
+        <h1 className="px-4 my-[25px] text-[32px] md:text-[40px] leading-[44px] font-bold text-white text-center">
           <span className="text-[#9442ED]">
             {t("home.tokenomics.title.start")}
           </span>{" "}
           {t("home.tokenomics.title.end")}
         </h1>
-        <p className="text-center text-[18px] leading-[27px] font-normal font-poppins text-white/80 max-w-[811px] mx-auto">
+        <p className="px-2 text-center text-[18px] leading-[27px] font-normal font-poppins text-white/80 max-w-[811px] mx-auto">
           {t("home.tokenomics.description")}
         </p>
 
         {/* Cards Section */}
-        <div className="max-w-[1236px] mx-auto mt-[60px] pb-[40px] grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+        <div className="max-w-[1133px] mx-auto xl:mt-[60px] pb-20 xl:pb-[40px] items-start flex flex-col-reverse xl:grid xl:grid-cols-2 gap-5 sm:gap-8 xl:items-center">
           {/* Legend */}
           <div className="space-y-4">
             {tokenomicsData.map(({ name, displayValue, color }) => (

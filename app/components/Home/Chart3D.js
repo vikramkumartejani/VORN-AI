@@ -79,7 +79,7 @@ const Chart3D = ({ data }) => {
   return (
     <div
       id="chartdiv"
-      className="w-[650px] h-[650px] mx-auto my-auto mt-[30px]"
+      className="sm:w-[650px] h-[400px] xl:h-[650px] sm:mx-auto my-auto mt-[30px]"
       ref={chartDiv}
     ></div>
   );
