@@ -79,7 +79,7 @@ export default function RoadMap() {
         {phaseData.map((phase, index) => (
           <div
             key={index}
-            className="rounded-[20px] bg-[#12092503] w-[300px] border border-[#FFFFFF80] overflow-hidden min-h-[126px] transition-shadow duration-300 hover:shadow-[0px_0px_25px_0px_#8B5CF6]"
+            className="rounded-[20px] bg-[#12092503] xl:w-[300px] border border-[#FFFFFF80] overflow-hidden min-h-[126px] transition-shadow duration-300 hover:shadow-[0px_0px_25px_0px_#8B5CF6]"
           >
             <div
               className="text-white rounded-[20px] px-[20px] pt-[11px] pb-[19px] min-h-[126px] flex flex-col w-full h-full flex-1"
