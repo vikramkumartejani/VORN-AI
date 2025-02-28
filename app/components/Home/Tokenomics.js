@@ -43,7 +43,7 @@ export default function Tokenomics() {
   ];
 
   return (
-    <div className="xl:h-[950px] lg:h-[900px] bg-black px-4 md:px-5 pt-20 pb-0 relative overflow-hidden">
+    <div className="xl:h-[850px] lg:h-[800px] bg-black px-4 md:px-5 pt-20 pb-0 relative overflow-hidden">
       <img
         src="/assets/tokenomics-bg.svg"
         alt="bg-graphic"
@@ -62,7 +62,7 @@ export default function Tokenomics() {
         </p>
 
         {/* Cards Section */}
-        <div className="max-w-[1133px] mx-auto lg:mt-[60px] pb-20 lg:pb-[40px] items-start flex flex-col-reverse lg:grid lg:grid-cols-2 gap-5 sm:gap-8 lg:items-center">
+        <div className="max-w-[1133px] mx-auto  pb-14 lg:pb-[40px] items-start flex flex-col-reverse lg:grid lg:grid-cols-2 gap-5 sm:gap-8 lg:items-center">
           {/* Legend */}
           <div className="space-y-4">
             {tokenomicsData.map(({ name, displayValue, color }) => (
