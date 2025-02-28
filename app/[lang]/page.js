@@ -53,7 +53,7 @@ const Home = () => {
       {/* <RoadMap /> */}
       {/* <Tokenomics /> */}
       <BuiltOn />
-      {/* <FAQ /> */}
+      <FAQ />
       <Footer />
     </I18nextProvider>
   );

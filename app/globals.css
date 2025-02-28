@@ -43,6 +43,44 @@ html {
   animation: pulseShadow 2s infinite ease-in-out;
 }
 
+/* Earn Reward */
+.earn-reward {
+  background: radial-gradient(
+      32.52% 50% at 50% 50%,
+      rgba(132, 45, 255, 0.58) 0%,
+      rgba(2, 1, 3, 0.25) 100%
+    ),
+    linear-gradient(0deg, #000000, #000000);
+}
+
+.earn-reward-bg {
+  background-image: linear-gradient(
+      0deg,
+      rgba(162, 90, 240, 0.3) 1px,
+      transparent 1px
+    ),
+    linear-gradient(90deg, rgba(163, 90, 240, 0.3) 1px, transparent 1px);
+  background-size: 130px 130px;
+  mask-image: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 1) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  opacity: 0.3;
+}
+
+@media screen and (max-width: 900px) {
+  .earn-reward{
+    background: none;
+  }
+  .earn-reward-bg {
+    background-image: none;
+    background-size:none;
+    mask-image: none;
+    /* opacity: ; */
+  }
+}
+
 /* Staking */
 .shadow-custom {
   position: relative;
@@ -118,6 +156,7 @@ html {
   width: 530px;
   height: 2256px;
 }
+
 @media (max-width: 1536px) {
   .svg-container {
     width: 530px;

@@ -28,29 +28,12 @@ export default function EarnRewards() {
   ];
 
   return (
-    <div
-      className="min-h-screen bg-black px-4 md:px-5 py-20 relative overflow-hidden"
-      style={{
-        background: `radial-gradient(32.52% 50% at 50% 50%, rgba(132, 45, 255, 0.58) 0%, rgba(2, 1, 3, 0.25) 100%), linear-gradient(0deg, #000000, #000000)`,
-      }}
-    >
+    <div className=" bg-black px-4 md:px-5 py-10 md:py-20 relative overflow-hidden earn-reward">
       {/* Grid Background Layer */}
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          backgroundImage: `linear-gradient(0deg, rgba(162, 90, 240, 0.3) 1px, transparent 1px),
-                      linear-gradient(90deg, rgba(163, 90, 240, 0.3) 1px, transparent 1px)`,
-          backgroundSize: "130px 130px",
-          maskImage:
-            "radial-gradient(circle, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%)",
-          opacity: 0.3,
-        }}
-      />
+      <div className="absolute inset-0 pointer-events-none earn-reward-bg"/>
       <SectionHeading text={t("home.earnRewards.title.start")} />
-      <h1 className="my-[25px] text-[40px] leading-[44px] font-bold text-white text-center">
-        <span className="text-[#9442ED]">
-          {t("home.earnRewards.title.start")}
-        </span>{" "}
+      <h1 className="my-[25px] text-[32px] md:text-[40px] leading-[44px] font-bold text-white text-center">
+        <span className="text-[#9442ED]"> {t("home.earnRewards.title.start")}</span>
         {t("home.earnRewards.title.end")}
       </h1>
       <p className="text-center text-[18px] leading-[27px] font-normal font-poppins text-white/80 max-w-[811px] mx-auto">
@@ -58,7 +41,7 @@ export default function EarnRewards() {
       </p>
 
       {/* Cards Section */}
-      <div className="max-w-[1236px] mx-auto space-y-[35px] mt-[75px]">
+      <div className="max-w-[1236px] mx-auto space-y-6 md:space-y-[35px] pt-16 xl:mt-[75px]">
         {cardData.map((card, index) => (
           <div
             key={index}
@@ -69,14 +52,14 @@ export default function EarnRewards() {
             }}
           >
             <div
-              className="rounded-[20px] px-[24px] py-[17px] min-h-[126px] flex items-center justify-between gap-6 w-full h-full flex-1"
+              className="rounded-[20px] px-[24px] py-[25px] md:py-[17px] min-h-[126px] flex items-center justify-between gap-6 w-full h-full flex-1"
               style={{
                 background: "linear-gradient(180deg, #000000 0%, #371866 100%)",
                 boxShadow: "0px 0px 50px 0px #8B5CF680 inset",
                 backdropFilter: "blur(10px)",
               }}
             >
-              <div className="flex items-center gap-[18px]">
+              <div className="flex md:items-center gap-[18px] md:flex-row flex-col">
                 <Image
                   src={card.icon}
                   alt={card.title}
@@ -84,7 +67,7 @@ export default function EarnRewards() {
                   height={44}
                 />
                 <div>
-                  <h2 className="text-[24px] font-bold text-white mb-[15px]">
+                  <h2 className="text-[20px] md:text-[24px] font-bold text-white mb-[15px]">
                     {card.title}
                   </h2>
                   <p className="text-white font-poppins font-[300] text-[16px] whitespace-pre-line">
@@ -97,7 +80,7 @@ export default function EarnRewards() {
                   href="/staking"
                   translationKey={card.buttonText}
                   paddingx="px-[28.5px]"
-                  extraClass="h-[47px]"
+                  extraClass="h-[47px] text-nowrap md:-mt-0 -mt-20 min-w-[122px]"
                 />
               )}
             </div>
