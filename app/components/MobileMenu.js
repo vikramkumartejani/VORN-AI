@@ -4,6 +4,7 @@ import { FaTimes } from "react-icons/fa";
 import { useRouter } from "next/navigation";
 import NavLink from "./NavLink";
 import Button from "./Button";
+import LanguageDropdown from "./LanguageDropdown";
 
 const MobileMenu = ({
   mobileOpen,
@@ -34,7 +35,8 @@ const MobileMenu = ({
         ))}
       </ul>
 
-      <div className="mt-4">
+      <div className="mt-4 space-y-4">
+        <LanguageDropdown />
         <Button href="/staking" translationKey={btnText} />
       </div>
     </div>

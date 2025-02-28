@@ -90,7 +90,7 @@ const LanguageDropdown = () => {
       </button>
 
       {isOpen && (
-        <ul className="w-[120px] absolute top-[62px] text-[#0F1017] border -left-6 backdrop-blur-3xl rounded-xl text-sm shadow-lg bg-black transition duration-100 ease-out">
+        <ul className="w-[120px] absolute lg:top-[62px] top-[50px]  text-[#0F1017] border -left-6 backdrop-blur-3xl rounded-xl text-sm shadow-lg bg-black transition duration-100 ease-out z-[999]">
           {languages.map((lang) => (
             <li
               key={lang.code}
