@@ -275,7 +275,40 @@
   },
   "depin": {
     "title": "DePIN – A Espinha Dorsal da VORN.AI",
-    "description": "DePIN na VORN.AI fornece os recursos físicos para o ecossistema, como nós de computação, dispositivos de armazenamento e redes de energia, permitindo que os usuários monetizem sua infraestrutura enquanto alimentam operações descentralizadas."
+    "description": "DePIN na VORN.AI fornece os recursos físicos para o ecossistema, como nós de computação, dispositivos de armazenamento e redes de energia, permitindo que os usuários monetizem sua infraestrutura enquanto alimentam operações descentralizadas.",
+    "poweringVORN": {
+      "title1": "Nós de Computação de IA Descentralizados",
+      "description1": "Compartilhe seu poder computacional para tarefas de IA, com a IA otimizando cargas de trabalho. Ganhe tokens VRN com base na sua contribuição.",
+      "title2": "Armazenamento em Nuvem Descentralizado:",
+      "description2": "Forneça armazenamento seguro e descentralizado com a IA lidando com criptografia e recuperação. Seja recompensado com tokens VRN.",
+      "title3": "Rede de Energia Descentralizada",
+      "description3": "Tokenize e negocie energia renovável enquanto a IA equilibra as cargas da rede. Ganhe tokens VRN por contribuir com recursos energéticos.",
+      "title4": "Integração de IoT e Cidades Inteligentes:",
+      "description4": "A IA processa dados IoT em tempo real para aplicações inteligentes, como monitoramento de tráfego e meio ambiente. Operadores de dispositivos ganham tokens VRN."
+    }
+  },
+  "rwa": {
+    "title": "RWA – O Motor Econômico da VORN.AI",
+    "description": "A tokenização RWA na VORN.AI conecta o mundo físico à tecnologia blockchain, permitindo que os usuários tokenizem, negociem e ganhem com ativos do mundo real.",
+    "rwaContent": {
+      "title": "Desbloqueando Ativos do Mundo Real para Todos.",
+      "description": "O RWA Core revoluciona a propriedade de ativos ao tokenizar a infraestrutura em ativos de blockchain, permitindo a propriedade fracionada para investidores de pequeno porte. Com a distribuição automatizada de rendimentos proporcionando renda passiva e um marketplace P2P para negociação global sem costura, o RWA Core torna ativos de alto valor acessíveis a todos.",
+      "heading": {
+        "start": "Conectando Ativos do Mundo Real",
+        "end": "com Utilidade Potencializada por Blockchain."
+      },
+      "features": {
+        "title1": "Plataforma de Tokenização RWA",
+        "description1": "Esta plataforma facilita a conversão de infraestrutura do mundo real em tokens lastreados em NFT, permitindo que os proprietários de ativos tokenizem e fracionem seus ativos para investimento global e geração de renda.",
+        "title2": "Marketplace RWA",
+        "description2": "O marketplace RWA é uma exchange descentralizada para comprar, vender e negociar ativos tokenizados, como imóveis e créditos de energia, com IA garantindo avaliações precisas, prevenção de fraudes e liquidez instantânea.",
+        "title3": "Pools de Staking RWA",
+        "description3": "Os pools de staking RWA permitem que os usuários apostem ativos tokenizados e ganhem rendimentos gerados a partir dos ativos do mundo real subjacentes, com IA gerenciando a distribuição de rendimentos com base no desempenho e nas condições de mercado.",
+        "title4": "Colateralização e Empréstimos RWA",
+        "description4": "Os serviços de colateralização e empréstimos RWA fornecem liquidez, permitindo que os usuários bloqueiem seus ativos tokenizados como colateral para empréstimos, com IA avaliando riscos, gerenciando taxas de juros e garantindo transações seguras."
+      },
+      "buttonText": "APOSTAR AGORA"
+    }
   },
   "footer": {
     "description": "VORN.AI – Impulsionando o futuro da inteligência descentralizada. Movido por IA. Alimentado por infraestrutura. Ativos tokenizados.",

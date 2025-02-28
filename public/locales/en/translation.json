@@ -275,7 +275,40 @@
   },
   "depin": {
     "title": "DePIN – The Backbone of VORN.AI",
-    "description": "DePIN in VORN.AI provides the physical resources for the ecosystem, such as computing nodes, storage devices, and energy grids, enabling users to monetize their infrastructure while powering decentralized operations."
+    "description": "DePIN in VORN.AI provides the physical resources for the ecosystem, such as computing nodes, storage devices, and energy grids, enabling users to monetize their infrastructure while powering decentralized operations.",
+    "poweringVORN": {
+      "title1": "Decentralized AI Compute Nodes",
+      "description1": "Share your computing power for AI tasks, with AI optimizing workloads. Earn VRN tokens based on your contribution.",
+      "title2": "Decentralized Cloud Storage:",
+      "description2": "Provide secure, decentralized storage with AI handling encryption and retrieval. Get rewarded in VRN tokens.",
+      "title3": "Decentralized Energy Grid",
+      "description3": "Tokenize and trade renewable energy while AI balances grid loads. Earn VRN tokens for contributing energy resources.",
+      "title4": "IoT & Smart Cities Integration:",
+      "description4": "AI processes real-time IoT data for smart applications like traffic and environment monitoring. Device operators earn VRN tokens."
+    }
+  },
+  "rwa": {
+    "title": "RWA – The Economic Engine of VORN.AI",
+    "description": "RWA tokenization in VORN.AI bridges the physical world with blockchain technology, allowing users to tokenize, trade, and earn from real-world assets.",
+    "rwaContent": {
+      "title": "Unlocking Real-World Assets for Everyone.",
+      "description": "RWA Core revolutionizes asset ownership by tokenizing infrastructure into blockchain assets, enabling fractional ownership for small-scale investors. With automated yield distribution providing passive income and a P2P marketplace for seamless global trading, RWA Core makes high-value assets accessible to all.",
+      "heading": {
+        "start": "Bridging Real-World Assets",
+        "end": "with Blockchain-Powered Utility."
+      },
+      "features": {
+        "title1": "RWA Tokenization Platform",
+        "description1": "This platform facilitates the conversion of real-world infrastructure into NFT-backed tokens, allowing asset owners to tokenize and fractionalize their assets for global investment and income generation.",
+        "title2": "RWA Marketplace",
+        "description2": "The RWA marketplace is a decentralized exchange for buying, selling, and trading tokenized assets like real estate and energy credits, with AI ensuring accurate valuations, fraud prevention, and instant liquidity.",
+        "title3": "RWA Staking Pools",
+        "description3": "RWA staking pools allow users to stake tokenized assets and earn yields generated from the underlying real-world assets, with AI managing yield distribution based on performance and market conditions.",
+        "title4": "RWA Collateralization & Lending",
+        "description4": "RWA collateralization and lending services provide liquidity by enabling users to lock their tokenized assets as collateral for loans, with AI assessing risk, managing interest rates, and ensuring secure transactions."
+      },
+      "buttonText": "Stake Now"
+    }
   },
   "footer": {
     "description": "VORN.AI – Powering the Future of Decentralized Intelligence AI-Driven. Infrastructure-Powered. Asset-Tokenized.",

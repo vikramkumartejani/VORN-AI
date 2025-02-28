@@ -1,59 +1,63 @@
 import Image from "next/image";
 import React from "react";
-
-const sections = [
-  {
-    title: "Decentralized AI Compute Nodes",
-    description:
-      "Share your computing power for AI tasks, with AI optimizing workloads. Earn VRN tokens based on your contribution.",
-    imageSrc: "/assets/de-pin/decentralized-ai-compute-nodes.png",
-    reverse: false,
-    marginTop: "mt-[-90px]",
-  },
-  {
-    title: "Decentralized Cloud Storage:",
-    description:
-      "Provide secure, decentralized storage with AI handling encryption and retrieval. Get rewarded in VRN tokens.",
-    imageSrc: "/assets/de-pin/decentralized-cloud-storage.png",
-    reverse: true,
-    marginTop: "mt-[-116px]",
-  },
-  {
-    title: "Decentralized Energy Grid",
-    description:
-      "Tokenize and trade renewable energy while AI balances grid loads. Earn VRN tokens for contributing energy resources.",
-    imageSrc: "/assets/de-pin/decentralized-energy-grid.png",
-    reverse: false,
-    marginTop: "mt-[-120px]",
-  },
-  {
-    title: "IoT & Smart Cities Integration:",
-    description:
-      "AI processes real-time IoT data for smart applications like traffic and environment monitoring. Device operators earn VRN tokens.",
-    imageSrc: "/assets/de-pin/iot-smart-cities-integration.png",
-    reverse: true,
-    marginTop: "mt-[-120px]",
-  },
-];
-
-const TimelinePoint = ({ marginTop }) => (
-  <div className={`hidden lg:block ${marginTop}`}>
-    <div className="absolute left-1/2 -translate-x-1/2 bg-[#6C38F31F] w-[56px] h-[56px] rounded-[300px] p-1 flex items-center justify-center z-10">
-      <div
-        className="w-[48px] h-[48px] rounded-[300px] flex items-center justify-center"
-        style={{
-          background:
-            "radial-gradient(42.46% 123.69% at 57.02% 58.9%, #A761FF 0%, #490A84 100%)",
-          boxShadow: `0px 1px 3px 0px #6C39F41A, 0px 5px 5px 0px #6C39F417, 0px 12px 7px 0px #6C39F40D, 0px 20px 8px 0px #6C39F403, 0px 32px 9px 0px #6C39F400`,
-        }}
-      >
-        <Image src="/assets/icons/star.svg" alt="icon" width={24} height={24} />
-      </div>
-    </div>
-  </div>
-);
+import { useTranslation } from "react-i18next";
 
 const PoweringVORNAI = () => {
+  const { t } = useTranslation();
+
+  const sections = [
+    {
+      title: t("depin.poweringVORN.title1"),
+      description: t("depin.poweringVORN.description1"),
+      imageSrc: "/assets/de-pin/decentralized-ai-compute-nodes.png",
+      reverse: false,
+      marginTop: "mt-[-90px]",
+    },
+    {
+      title: t("depin.poweringVORN.title2"),
+      description: t("depin.poweringVORN.description2"),
+      imageSrc: "/assets/de-pin/decentralized-cloud-storage.png",
+      reverse: true,
+      marginTop: "mt-[-116px]",
+    },
+    {
+      title: t("depin.poweringVORN.title3"),
+      description: t("depin.poweringVORN.description3"),
+      imageSrc: "/assets/de-pin/decentralized-energy-grid.png",
+      reverse: false,
+      marginTop: "mt-[-120px]",
+    },
+    {
+      title: t("depin.poweringVORN.title4"),
+      description: t("depin.poweringVORN.description4"),
+      imageSrc: "/assets/de-pin/iot-smart-cities-integration.png",
+      reverse: true,
+      marginTop: "mt-[-120px]",
+    },
+  ];
+
+  const TimelinePoint = ({ marginTop }) => (
+    <div className={`hidden lg:block ${marginTop}`}>
+      <div className="absolute left-1/2 -translate-x-1/2 bg-[#6C38F31F] w-[56px] h-[56px] rounded-[300px] p-1 flex items-center justify-center z-10">
+        <div
+          className="w-[48px] h-[48px] rounded-[300px] flex items-center justify-center"
+          style={{
+            background:
+              "radial-gradient(42.46% 123.69% at 57.02% 58.9%, #A761FF 0%, #490A84 100%)",
+            boxShadow: `0px 1px 3px 0px #6C39F41A, 0px 5px 5px 0px #6C39F417, 0px 12px 7px 0px #6C39F40D, 0px 20px 8px 0px #6C39F403, 0px 32px 9px 0px #6C39F400`,
+          }}
+        >
+          <Image
+            src="/assets/icons/star.svg"
+            alt="icon"
+            width={24}
+            height={24}
+          />
+        </div>
+      </div>
+    </div>
+  );
+
   return (
     <div className="w-full bg-[#020103] px-6 sm:px-10 pt-[99px] pb-[200px] lg:py-[140px]">
       <h1 className="mx-auto w-full max-w-[650px] px-10 text-center text-[32px] leading-[38px] font-bold text-white md:text-[40px] md:leading-[60px]">
