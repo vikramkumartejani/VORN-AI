@@ -3,8 +3,9 @@
     "nav": {
       "home": "হোম",
       "features": "ফিচার",
-      "aiModels": "এআই মডেল",
-      "security": "নিরাপত্তা",
+      "unifiedAI": "Unified AI",
+      "depin": "Depin",
+      "rwa": "RWA",
       "roadmap": "রোডম্যাপ",
       "tokenomics": "টোকেনোমিক্স",
       "whitepaper": "সাদা পত্র",

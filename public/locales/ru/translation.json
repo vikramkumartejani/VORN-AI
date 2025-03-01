@@ -3,8 +3,9 @@
     "nav": {
       "home": "Главная",
       "features": "Функции",
-      "aiModels": "Модели ИИ",
-      "security": "Безопасность",
+      "unifiedAI": "Unified AI",
+      "depin": "Depin",
+      "rwa": "RWA",
       "roadmap": "Дорожная карта",
       "tokenomics": "Токеномика",
       "whitepaper": "Белая книга",

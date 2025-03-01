@@ -3,8 +3,9 @@
     "nav": {
       "home": "ホーム",
       "features": "機能",
-      "aiModels": "AIモデル",
-      "security": "セキュリティ",
+      "unifiedAI": "Unified AI",
+      "depin": "Depin",
+      "rwa": "RWA",
       "roadmap": "ロードマップ",
       "tokenomics": "トークノミクス",
       "whitepaper": "ホワイトペーパー",

@@ -3,8 +3,9 @@
     "nav": {
       "home": "Home",
       "features": "Features",
-      "aiModels": "AI Models",
-      "security": "Security",
+      "unifiedAI": "Unified AI",
+      "depin": "Depin",
+      "rwa": "RWA",
       "roadmap": "RoadMap",
       "tokenomics": "Tokenomics",
       "whitepaper": "Whitepaper",
