@@ -55,7 +55,10 @@ export default function RoadMap() {
   ];
 
   return (
-    <div className=" bg-black px-4 md:px-5 py-24 relative overflow-hidden">
+    <div
+      id="roadmap"
+      className="bg-black px-4 md:px-5 py-24 relative overflow-hidden"
+    >
       <img
         src="/assets/roadmap-bg.svg"
         alt="bg-graphic"

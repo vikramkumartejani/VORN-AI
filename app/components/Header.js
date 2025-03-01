@@ -61,10 +61,10 @@ const Header = () => {
         { name: t("header.nav.rwa"), href: "/rwa" },
       ],
     },
-    { name: t("header.nav.roadmap"), href: "#roadmap" },
-    { name: t("header.nav.tokenomics"), href: "#tokenomics" },
+    { name: t("header.nav.roadmap"), href: "/#roadmap" },
+    { name: t("header.nav.tokenomics"), href: "/#tokenomics" },
     { name: t("header.nav.whitepaper"), href: "/whitepaper" },
-    { name: t("header.nav.faqs"), href: "#faqs" },
+    { name: t("header.nav.faqs"), href: "/#faqs" },
   ];
 
   const [dropdownOpen, setDropdownOpen] = useState(false);

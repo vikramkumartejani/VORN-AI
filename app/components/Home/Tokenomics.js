@@ -43,7 +43,10 @@ export default function Tokenomics() {
   ];
 
   return (
-    <div className="xl:h-[850px] lg:h-[800px] bg-black px-4 md:px-5 pt-20 pb-0 relative overflow-hidden">
+    <div
+      id="tokenomics"
+      className="xl:h-[850px] lg:h-[800px] bg-black px-4 md:px-5 pt-20 pb-0 relative overflow-hidden"
+    >
       <img
         src="/assets/tokenomics-bg.svg"
         alt="bg-graphic"
