@@ -11,28 +11,28 @@ const RWAContent = () => {
       id: 1,
       title: t("rwa.rwaContent.features.title1"),
       description: t("rwa.rwaContent.features.description1"),
-      imageSrc: "/assets/rwa-tokenization-platform.png",
+      imageSrc: "/assets/rwa/1.webp",
       reversed: false,
     },
     {
       id: 2,
       title: t("rwa.rwaContent.features.title2"),
       description: t("rwa.rwaContent.features.description2"),
-      imageSrc: "/assets/rwa-marketplace.png",
+      imageSrc: "/assets/rwa/2.webp",
       reversed: true,
     },
     {
       id: 3,
       title: t("rwa.rwaContent.features.title3"),
       description: t("rwa.rwaContent.features.description3"),
-      imageSrc: "/assets/rwa-staking-pools.png",
+      imageSrc: "/assets/rwa/3.webp",
       reversed: false,
     },
     {
       id: 4,
       title: t("rwa.rwaContent.features.title4"),
       description: t("rwa.rwaContent.features.description4"),
-      imageSrc: "/assets/rwa-collateralization-lending.png",
+      imageSrc: "/assets/rwa/4.webp",
       reversed: true,
     },
   ];
@@ -41,7 +41,7 @@ const RWAContent = () => {
     <div className="px-5">
       <div className="py-[50px] md:py-[80px] lg:py-[113px] max-w-[986px] mx-auto w-full flex items-center justify-between lg:flex-row flex-col gap-10 lg:gap-4">
         <Image
-          src="/assets/unlocking-real-world.png"
+          src="/assets/rwa/about-rwa.webp"
           alt="white-image"
           width={425}
           height={410}
@@ -110,7 +110,7 @@ const RWAContent = () => {
                   alt="image"
                   width={472}
                   height={400}
-                  className="rounded-[10px] border border-[#7E0ADB]"
+                  className="rounded-[10px] border border-[#7E0ADB] min-h-[400px] object-cover"
                 />
               </>
             ) : (
@@ -120,7 +120,7 @@ const RWAContent = () => {
                   alt="image"
                   width={472}
                   height={400}
-                  className="rounded-[10px] border border-[#7E0ADB]"
+                  className="rounded-[10px] border border-[#7E0ADB]  min-h-[400px] object-cover"
                 />
                 <div
                   className="relative flex-1 h-full rounded-[10px] p-[1px]"

@@ -9,30 +9,30 @@ const PoweringVORNAI = () => {
     {
       title: t("depin.poweringVORN.title1"),
       description: t("depin.poweringVORN.description1"),
-      imageSrc: "/assets/de-pin/decentralized-ai-compute-nodes.png",
+      imageSrc: "/assets/de-pin/decentralized_ai_compute_nodes.webp",
       reverse: false,
       marginTop: "mt-[-90px]",
     },
     {
       title: t("depin.poweringVORN.title2"),
       description: t("depin.poweringVORN.description2"),
-      imageSrc: "/assets/de-pin/decentralized-cloud-storage.png",
+      imageSrc: "/assets/de-pin/decentralized_cloud_storage_.webp",
       reverse: true,
       marginTop: "mt-[-116px]",
     },
     {
       title: t("depin.poweringVORN.title3"),
       description: t("depin.poweringVORN.description3"),
-      imageSrc: "/assets/de-pin/decentralized-energy-grid.png",
+      imageSrc: "/assets/de-pin/decentralized_energy_grid.webp",
       reverse: false,
-      marginTop: "mt-[-120px]",
+      marginTop: "mt-[-150px]",
     },
     {
       title: t("depin.poweringVORN.title4"),
       description: t("depin.poweringVORN.description4"),
-      imageSrc: "/assets/de-pin/iot-smart-cities-integration.png",
+      imageSrc: "/assets/de-pin/iot_smart_cities_integration_.webp",
       reverse: true,
-      marginTop: "mt-[-120px]",
+      marginTop: "mt-[-200px]",
     },
   ];
 
@@ -72,8 +72,8 @@ const PoweringVORNAI = () => {
         {sections.map((section, index) => (
           <div
             key={index}
-            className={`flex items-center flex-col gap-6 lg:gap-[100px] ${
-              section.reverse ? "md:flex-row-reverse" : "md:flex-row"
+            className={`flex items-center flex-col gap-6 lg:gap-10 xl:gap-[100px] ${
+              section.reverse ? "lg:flex-row-reverse" : "lg:flex-row"
             }`}
           >
             <Image
@@ -116,7 +116,7 @@ const Line = () => (
         preserveAspectRatio="xMidYMid meet"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="w-full h-auto"
+        className="w-full h-full"
       >
         <path
           d="M280 0V232.643C280 244.328 286.179 255.141 296.246 261.074L512.044 388.24C533.639 400.966 533.722 432.173 512.194 445.013L296.096 573.9C286.114 579.853 280 590.619 280 602.242V669V802.5"

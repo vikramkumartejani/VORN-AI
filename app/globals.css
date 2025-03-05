@@ -140,9 +140,9 @@ html {
   position: relative;
   background-size: cover;
   background-position: center;
+  overflow: hidden;
   background-repeat: no-repeat;
-
-  background-image: url("/assets/zy.svg");
+  background-image: url("/assets/ai/ai_header_background.webp");
 }
 
 @media screen and (max-width: 1024px) {

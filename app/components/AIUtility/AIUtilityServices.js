@@ -15,7 +15,7 @@ const AIUtilityServices = () => {
           {t("aiUtility.services.subtitle")}
         </h2>
         <Image
-          src="/assets/ai-utility-services.webp"
+          src="/assets/ai/ai-ulility-service.webp"
           alt="ai-utility-services"
           width={721}
           height={583}

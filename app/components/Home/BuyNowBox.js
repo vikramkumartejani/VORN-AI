@@ -7,6 +7,7 @@ import { useTranslation } from "react-i18next";
 const tabs = [
   { id: "ETH", label: "ETH", icon: "/assets/icons/eth.svg" },
   { id: "BNB", label: "BNB", icon: "/assets/icons/bnb.svg" },
+  { id: "USDC", label: "USDC", icon: "/assets/icons/eth.svg" },
 ];
 
 const currenciesByChain = {
@@ -17,6 +18,11 @@ const currenciesByChain = {
   ],
   BNB: [
     { name: "BNB", icon: "/assets/icons/bnb.svg" },
+    { name: "BUSD", icon: "/assets/icons/bnb.svg" },
+    { name: "CAKE", icon: "/assets/icons/bnb.svg" },
+  ],
+  USDC: [
+    { name: "USDC", icon: "/assets/icons/bnb.svg" },
     { name: "BUSD", icon: "/assets/icons/bnb.svg" },
     { name: "CAKE", icon: "/assets/icons/bnb.svg" },
   ],

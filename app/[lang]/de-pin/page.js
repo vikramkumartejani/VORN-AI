@@ -28,7 +28,7 @@ const DePIN = () => {
             muted
             playsInline
           >
-            <source src="/assets/de-pin-bg-video.mp4" type="video/mp4" />
+            <source src="/assets/de-pin/de-pin-bg-video.mp4" type="video/mp4" />
           </video>
         </div>
 

@@ -48,7 +48,7 @@ const Timeline = () => {
   return (
     <div className="bg-[#020103] pt-[100px] lg:pt-[54px] pb-[200px] relative px-5">
       {/* Center line */}
-      <div className="lg:block hidden absolute left-1/2 top-[250px] xl:top-[300px] bottom-[380px] xl:bottom-[400px] w-[2px] bg-[#252525] -translate-x-1/2" />
+      <div className="lg:block hidden absolute left-1/2 top-[250px] xl:top-[300px] bottom-[380px] xl:bottom-[420px] w-[2px] bg-[#252525] -translate-x-1/2" />
 
       <div className="max-w-[1240px] mx-auto px-4 lg:block hidden">
         <div className="space-y-32">
@@ -63,7 +63,7 @@ const Timeline = () => {
             </div>
             <div className="flex justify-start">
               <Image
-                src="/assets/ai-powere-compute-grid.png"
+                src="/assets/ai/ai_powered_compute_grid_.webp"
                 alt="AI-Powered Compute Grid"
                 width={715}
                 height={453}
@@ -76,7 +76,7 @@ const Timeline = () => {
             <TimelinePoint />
             <div className="flex justify-end">
               <Image
-                src="/assets/ai-yield-management-system.png"
+                src="/assets/ai/ai_yield_management_system_.webp"
                 alt="AI Yield Management System"
                 width={521}
                 height={539}
@@ -101,7 +101,7 @@ const Timeline = () => {
             </div>
             <div className="flex justify-start">
               <Image
-                src="/assets/ai-optimized-energy-marketplace.png"
+                src="/assets/ai/ai_optimized_energy_marketplace_.webp"
                 alt="AI-Optimized Energy Marketplace"
                 width={705}
                 height={499}
@@ -122,7 +122,7 @@ const Timeline = () => {
           </div>
           <div className="flex justify-start">
             <Image
-              src="/assets/ai-powere-compute-grid.png"
+              src="/assets/ai/ai_powered_compute_grid_.webp"
               alt="AI-Powered Compute Grid"
               width={715}
               height={453}
@@ -134,7 +134,7 @@ const Timeline = () => {
          <div className="mt-10 flex flex-col-reverse gap-5 items-center">
             <div className="flex justify-end">
               <Image
-                src="/assets/ai-yield-management-system.png"
+                src="/assets/ai/ai_yield_management_system_.webp"
                 alt="AI Yield Management System"
                 width={521}
                 height={539}
@@ -158,7 +158,7 @@ const Timeline = () => {
             </div>
             <div className="flex justify-start">
               <Image
-                src="/assets/ai-optimized-energy-marketplace-mobile.png"
+                src="/assets/ai/ai_optimized_energy_marketplace_.webp"
                 alt="AI-Optimized Energy Marketplace"
                 width={705}
                 height={499}

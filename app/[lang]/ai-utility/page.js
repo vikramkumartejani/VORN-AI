@@ -19,7 +19,7 @@ const AIUtility = () => {
       <Header />
 
       {/* Hero Section */}
-      <div className="relative ai-utility-hero flex flex-col items-center justify-center text-center min-h-screen px-6">
+      <div className="relative ai-utility-hero flex flex-col items-center justify-center text-center overflow-y-hidden min-h-screen px-6">
         {/* Hero Content */}
         <div className="max-w-[821px] mx-auto">
           <h1 className="text-[40px] md:text-[54px] leading-[48px] md:leading-[74px] font-bold text-white">

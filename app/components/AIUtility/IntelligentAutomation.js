@@ -16,7 +16,7 @@ const IntelligentAutomation = () => {
             loop
             playsInline
           >
-            <source src="/assets/ai.mp4" type="video/mp4" />
+            <source src="/assets/ai/ai-animation.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>
